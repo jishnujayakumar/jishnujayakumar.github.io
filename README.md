@@ -1,3 +1,3 @@
-# [Jishnu P - Portfolio](https://goo.gl/w89o18)
+# [Jishnu P - Portfolio](https://goo.gl/RgcxcK)
 ## This is my personal site. I have tried to keep it as simple as possible.
-### Visit [https://jishnujayakumar.github.io/](https://goo.gl/w89o18)
+### Visit [https://jishnup.me/](https://goo.gl/RgcxcK)
