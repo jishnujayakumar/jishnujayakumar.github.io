@@ -57,7 +57,7 @@ body, h1, h2, h3, h4, h5, h6 {
     font-size: 3em;
   }
   ul.intro-social-buttons>li {
-    display: block;
+    display: inline-table;
     margin-bottom: 20px;
     padding: 0;
   }
