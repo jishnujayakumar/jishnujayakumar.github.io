@@ -63,6 +63,9 @@
             <li class="nav-item">
               <a class="nav-link" href="https://goo.gl/kM3NJF" target="_blank">Resume</a>
             </li>          
+	    <li class="nav-item">
+              <a class="nav-link" href="https://goo.gl/ZpizQ2" target="_blank">Project FR</a>
+            </li> 
           </ul>
         </div>
       </div>
@@ -79,19 +82,37 @@
             <li class="list-inline-item">
               <a href="https://goo.gl/X8b2cs" class="btn btn-secondary btn-lg" target="_blank">
                 <i class="fa fa-twitter fa-fw"></i>
-                <span class="network-name">Twitter</span>
+                <!--span class="network-name">Twitter</span-->
               </a>
             </li>
             <li class="list-inline-item">
               <a href="https://goo.gl/nVtDMG" class="btn btn-secondary btn-lg" target="_blank">
                 <i class="fa fa-github fa-fw"></i>
-                <span class="network-name">Github</span>
+                <!--span class="network-name">Github</span-->
               </a>
             </li>
             <li class="list-inline-item">
               <a href="https://goo.gl/MPVqbX" class="btn btn-secondary btn-lg" target="_blank">
                 <i class="fa fa-linkedin fa-fw"></i>
-                <span class="network-name">Linkedin</span>
+                <!--span class="network-name">Linkedin</span-->
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://goo.gl/Wumv56" class="btn btn-secondary btn-lg" target="_blank">
+                <i class="fa fa-medium fa-fw"></i>
+                <!--span class="network-name">Linkedin</span-->
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://goo.gl/FfBcRo" class="btn btn-secondary btn-lg" target="_blank">
+                <i class="fa fa-youtube-play fa-fw"></i>
+                <!--span class="network-name">Linkedin</span-->
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://goo.gl/5v1TWL" class="btn btn-secondary btn-lg" target="_blank">
+                <i class="fa fa-slideshare fa-fw"></i>
+                <!--span class="network-name">Linkedin</span-->
               </a>
             </li>
           </ul>
@@ -110,7 +131,17 @@
     <script src="./vendor/jquery/jquery.min.js"></script>
     <script src="./vendor/popper/popper.min.js"></script>
     <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+  
+    <script type="text/javascript">
+      var vglnk = { key: 'f3ab43ca429393d5b93352cf66988d58' };
 
+      (function(d, t) {
+        var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+        s.src = '//cdn.viglink.com/api/vglnk.js';
+        var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+      }(document, 'script'));
+    </script>
+    
   </body>
 
 </html>
