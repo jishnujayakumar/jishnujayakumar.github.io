@@ -19,14 +19,16 @@ body, h1, h2, h3, h4, h5, h6 {
   padding-bottom: 50px;
   text-align: center;
   color: #f8f8f8;
-  background: url(../img/intro-bg.jpg) no-repeat center center;
+  background: url(../img/estonia.jpg) no-repeat center center;
   background-size: cover;
+  height:100%;
 }
 
 .intro-message {
   position: relative;
   padding-top: 20%;
   padding-bottom: 20%;
+  text-align: center;
 }
 
 .intro-message>h1 {
@@ -97,11 +99,16 @@ body, h1, h2, h3, h4, h5, h6 {
   border-top: 3px solid #e7e7e7;
 }
 
+.navbar{
+  /* background-color: rgba(100, 255, 255, 0); */
+}
+
 .banner {
   padding: 100px 0;
   color: #f8f8f8;
-  background: url(../img/banner-bg.jpg) no-repeat center center;
+  background: url(../img/estonia.jpg) no-repeat center center;
   background-size: cover;
+  height: 100%;
 }
 
 .banner h2 {
@@ -143,10 +150,20 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 footer {
-  padding: 50px 0;
-  background-color: #f8f8f8;
+  /* padding: 50px 0; */
+  position: absolute;
+  bottom: 0;
+  /* background-color: #f8f8f8; */
+  width: 100%;
+  line-height: 30px;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0;
+  margin: 0;
+  /* color: white !important; */
 }
 
 p.copyright {
-  margin: 15px 0 0;
+  margin: 10px 10px 10px 10px;
+  /* margin:auto; */
+  color: #fff !important;
 }
