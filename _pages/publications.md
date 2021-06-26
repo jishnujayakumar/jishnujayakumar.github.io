@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: "* denotes equal contribution and joint lead authorship."
+description: "[ star ] denotes equal contribution and joint lead authorship."
 years: [ 2021, 2018, 2017 ]
 nav: true
 ---
