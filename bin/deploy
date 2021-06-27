@@ -18,8 +18,8 @@ while [[ $# > 0 ]]; do
         exit 0
         ;;
         -u|--user)
-        SRC_BRANCH="master"
-        DEPLOY_BRANCH="gh-pages"
+        SRC_BRANCH="source"
+        DEPLOY_BRANCH="master"
         ;;
         -s|--src)
         SRC_BRANCH="$2"
@@ -107,6 +107,6 @@ git commit --allow-empty -m "$(git log -1 --pretty=%B) [ci skip]"
 # Move back to SRC_BRANCH
 git checkout $SRC_BRANCH
 
-echo "Deployed successfully!!!"
+echo "Deployed successfully!"
 
 exit 0
