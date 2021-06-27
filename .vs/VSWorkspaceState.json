@@ -1,6 +1,7 @@
 {
   "ExpandedNodes": [
-    "\\assets\\img",
+    "",
+    "\\bin",
     "\\_bibliography",
     "\\_includes",
     "\\_layouts",
@@ -8,5 +9,6 @@
     "\\_pages",
     "\\_sass"
   ],
+  "SelectedNode": "\\_sass\\_themes.scss",
   "PreviewInSolutionExplorer": false
 }
