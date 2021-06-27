@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-description: <a href="#">UC San Diego &bull; IIT Kharagpur &bull; NVIDIA &bull; IISc Bengaluru &bull; IIIT Vadodara</a>
+description: <a href="#">UC San Diego &bull; IIT Kharagpur &bull; NVIDIA &bull; IISc &bull; IIIT Vadodara</a>
 profile:
   align: right
   image: prof_pic.jpg
