@@ -55,8 +55,8 @@
 }
 
 .publications ol.bibliography li .author > a{
-    color: black !important;
-    border-bottom: 1px dotted black !important;
+    color: var(--global-text-color) !important;
+    border-bottom: 1px dotted var(--global-text-color) !important;
 }
 
 /******************************************************************************
