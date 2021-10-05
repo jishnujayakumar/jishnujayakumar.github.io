@@ -6,7 +6,7 @@ description: <a href="#">UTD &bull; IIT Kharagpur &bull; NVIDIA &bull; IISc &bul
 profile:
   align: right
   image: prof_pic.jpg
-  address: jishnu.p [at] utdallas [dot] edu #jishnu [dot] jayakumar182 [at] gmail [dot] com
+  address: jishnu [dot] p [at] utdallas [dot] edu #jishnu [dot] jayakumar182 [at] gmail [dot] com
 
 news: true  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
