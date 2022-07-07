@@ -16,10 +16,12 @@ categories: research
 
 <!-- <hr> -->
 
-Docker is a well-known tool. Though it is used prominently in the industry, there is a usage gap when speaking about its usage in academic research. The main advantage of using Docker is that it allows the creation of images that ease the process of reproducibility. There have been various attempts to encourage reproducibility.
+Docker is a well-known tool. Although it is used prominently in the industry, there is a usage gap when talking about academic research. The main advantage of using Docker is that it allows the creation of images that ease the process of reproducibility. There have been various attempts to encourage reproducibility.
 
 - [NAACL'22 Reproducibility Track](https://naacl2022-reproducibility-track.github.io/tutorial/){:target="_blank"}
 - [RESCIENCE C](http://rescience.githb.io/){:target="_blank"}
+
+It is always a good idea to do experiments inside docker container so that at the end the image of the container can be shared. This would not only give the end users the same environment for conducting experiments but also reduce a lot of environment setup time.
 
 Writing under process ...
 
