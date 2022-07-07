@@ -2,7 +2,7 @@
 layout: post
 title: Using Docker for Academic Research
 date: Wed 06 Jul 2022 06:54:24 PM CDT
-description: How to use docker for academic research?
+description: Need for docker in academic research
 jumbotron: ../../../assets/blog/docker-for-research.svg
 jumbotron_alt: docker for academic research
 tags: docker research
@@ -16,7 +16,7 @@ categories: research
 
 <!-- <hr> -->
 
-Docker is a well-known tool used widely. Though it is used prominently in the industry, there is a usage gap when speaking about its usage in academic research. The main advantage of using Docker is that it allows the creation of images that ease the process of reproducibility. There have been various attempts to encourage reproducibility.
+Docker is a well-known tool. Though it is used prominently in the industry, there is a usage gap when speaking about its usage in academic research. The main advantage of using Docker is that it allows the creation of images that ease the process of reproducibility. There have been various attempts to encourage reproducibility.
 
 - [NAACL'22 Reproducibility Track](https://naacl2022-reproducibility-track.github.io/tutorial/){:target="_blank"}
 - [RESCIENCE C](http://rescience.githb.io/){:target="_blank"}
