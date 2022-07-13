@@ -25,6 +25,27 @@ It is always a good idea to do experiments inside docker container so that at th
 
 Writing under process ...
 
+
+{% highlight bash %}
+
+docker images
+
+docker run --gpus all -id --rm -v ~/Documents/github/meta-dataset:/workspace --name meta-dataset_jishnu__01  nvcr.io/nvidia/tensorflow:21.12-tf1-py3
+docker exec -it meta-dataset_jishnu__01 /bin/bash
+
+docker commit --author jishnu.p@utdallas.edu --message "Meta-dataset including FewSOL dataset and it's related code setup" meta-dataset_jishnu__01
+
+docker ps # get IMAGE-ID
+docker tag <IMAGE-ID> fewsol-meta-dataset
+
+docker login -u <username>
+
+docker tag <IMAGE-ID> <username>/<repo>:<tag>
+
+docker push <username>/<repo>
+{% endhighlight %}
+
+
 Feel free to reach out in case you have a query. You are always welcome. <br>
 Please post it in the form of a tweet to
 [@jis_padalunkal](https://twitter.com/jis_padalunkal){:target="_blank"}
