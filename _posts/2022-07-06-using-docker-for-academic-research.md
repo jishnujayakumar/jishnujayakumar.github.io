@@ -25,13 +25,38 @@ It is always a good idea to do experiments inside docker container so that at th
 
 Writing under process ...
 
+
+{% highlight bash %}
+
+docker images
+
+docker run --gpus all -id --rm \
+-v <cloned-repo>:/workspace \
+--name <container-name> <docker-image>
+
+docker exec -it <container-name> /bin/bash
+
+docker commit \
+--author <author-email> \
+--message <commit-message> 
+<container-name>
+
+docker ps # get IMAGE-ID
+docker tag <IMAGE-ID> <repository-name>
+
+docker login -u <username>
+
+docker tag <IMAGE-ID> <username>/<repo>:<tag>
+
+# create a repo on docker hub, i.e. <username>/<repo>
+docker push <username>/<repo>
+{% endhighlight %}
+
+
 Feel free to reach out in case you have a query. You are always welcome. <br>
 Please post it in the form of a tweet to
-[@jis_padalunkal](https://twitter.com/jis_padalunkal){:target="_blank"}
+[@jis_padalunkal](https://twitter.com/jis_padalunkal){:target="_blank"} and I will definitely try to answer it.
 
 {% highlight python %}
 @jis_padalunkal #askjishnu <your question>
 {% endhighlight %}
-
-
-I will definitely try to answer it.
