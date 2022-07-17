@@ -2,13 +2,13 @@
 layout: post
 title: Using Docker for Academic Research
 date: Wed 06 Jul 2022 06:54:24 PM CDT
-description: Need for docker in academic research
+description: Need for Docker in academic research
 jumbotron: ../../../assets/blog/docker-for-research.svg
-jumbotron_alt: docker for academic research
-tags: docker research
+jumbotron_alt: Docker for academic research
+tags: Docker research
 categories: research
 ---
-<img src="../../../assets/blog/docker-for-research.svg" alt="docker for academic research" width="100%" height="150px" >
+<img src="../../../assets/blog/docker-for-research.svg" alt="Docker for academic research" width="100%" height="150px" >
 <center>Image made using logos available <a href='https://www.docker.com/company/newsroom/media-resources/' target="_blank">here</a>.</center><br>
 <hr>
 **Note**: *Reading this post needs familiarity with [Docker](https://www.docker.com/){:target="_blank"}. If you are new to the Docker world, I suggest looking [here](https://www.youtube.com/watch?v=iqqDU2crIEQ){:target="_blank"}. This post is more catered towards the steps required for creating and pushing images to [DockerHub]. Hence kess *
@@ -21,11 +21,11 @@ Docker is a well-known tool. Although it is used prominently in the industry, th
 - [NAACL'22 Reproducibility Track](https://naacl2022-reproducibility-track.github.io/tutorial/){:target="_blank"}
 - [RESCIENCE C](http://rescience.githb.io/){:target="_blank"}
 
-It is always a good idea to do experiments inside the docker container so that the image of the container can be shared at the end. This would give the end users the same environment for conducting experiments and reduce a lot of environment setup time.
+It is always a good idea to do experiments inside the Docker container so that the image of the container can be shared at the end. This would give the end users the same environment for conducting experiments and reduce a lot of environment setup time.
 
 [DockerHub]: https://hub.docker.com/
 
-The following steps could be used to create a docker image for your project:
+Use the following steps to create and publish the Docker image for your project:
 
 **Step.1.a**: Check for the image of interest locally.
 {% highlight bash %}
@@ -35,7 +35,7 @@ docker images
 **Step.1.b**: If none, find an image of choice from [DockerHub] or any other source.
 
 
-**Step.2**: Run the docker image as a container.
+**Step.2**: Run the Docker image as a container.
 {% highlight bash %}
 docker run --gpus all -id --rm \
 -v <cloned-repo>:/workspace \
