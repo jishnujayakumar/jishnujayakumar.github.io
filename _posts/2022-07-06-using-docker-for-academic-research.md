@@ -11,7 +11,7 @@ categories: research
 <img src="../../../assets/blog/docker-for-research.svg" alt="Docker for academic research" width="100%" height="150px" >
 <center>Image made using logos available <a href='https://www.docker.com/company/newsroom/media-resources/' target="_blank">here</a>.</center><br>
 <hr>
-**Note**: *Reading this post needs familiarity with [Docker](https://www.docker.com/){:target="_blank"}. If you are new to the Docker world, I suggest looking [here](https://www.youtube.com/watch?v=iqqDU2crIEQ){:target="_blank"}. This post is more catered towards the steps required for creating and pushing images to [DockerHub]. Hence kess *
+* **Note**: Reading this post needs familiarity with [Docker](https://www.docker.com/){:target="_blank"}. If you are new to the Docker world, I suggest looking [here](https://www.youtube.com/watch?v=iqqDU2crIEQ){:target="_blank"}. This post is more catered towards the steps required for creating and pushing images to [DockerHub].*
 
 
 <!-- <hr> -->
