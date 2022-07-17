@@ -25,7 +25,7 @@ It is always a good idea to do experiments inside the Docker container so that t
 
 [DockerHub]: https://hub.docker.com/
 
-Use the following steps to create and publish the Docker image for your project:
+Use the following steps to create and publish a Docker image for your project:
 
 **Step.1.a**: Check for the image of interest locally.
 {% highlight bash %}
