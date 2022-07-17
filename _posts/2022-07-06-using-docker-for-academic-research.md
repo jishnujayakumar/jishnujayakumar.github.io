@@ -44,7 +44,7 @@ docker run --gpus all -id --rm \
 
 **Step.3**: Get inside the container.
 {% highlight bash %}
-docker exec -it <container-name> /bin/bash
+docker exec -it <container-name> /bin/bash # for bash shell
 {% endhighlight %}
 
 **Step.4**: Do the necessary changes, i.e., copy files, install packages, etc.
