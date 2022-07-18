@@ -53,7 +53,7 @@ docker exec -it <container-name> /bin/bash # for bash shell
 {% highlight bash %}
 docker commit \
 --author <author-email> \
---message <commit-message> 
+--message <commit-message> \ 
 <container-name>
 {% endhighlight %}
 
