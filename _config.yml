@@ -6,12 +6,12 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Jishnu
 middle_name: Jaykumar
 last_name: Padalunkal
-email_id: jishnu.jayakumar182@gmail.com
+email_id: jishnu.p@utdallas.edu
 cv_link: https://drive.google.com/file/d/1VUsrI9BKeB4lmhxnfEi8CYO9jLzfR5vc
 email: null
 
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Personal webpage of Jishnu Jaykumar Padalunkal based on [*folio](https://github.com/bogoli/-folio) design.
+  .
 footer_text: >
   Theme: <a href="https://github.com/alshedivat/al-folio" target="_blank">Al-Folio</a>.
 
@@ -167,7 +167,7 @@ scholar:
 # Optional Features
 # -----------------------------------------------------------------------------
 
-enable_google_analytics:    false  # enables google analytics
+enable_google_analytics:    true  # enables google analytics
 enable_panelbear_analytics: false  # enables panelbear analytics
 enable_mansory:             true   # enables automatic project cards arangement
 enable_math:                true   # enables math typesetting (uses MathJax)
