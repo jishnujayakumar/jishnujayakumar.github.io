@@ -62,7 +62,7 @@ wikidata_id: # your wikidata id
 contact_note: >
   If you want to collaborate at the intersection of <a href="https://en.wikipedia.org/wiki/Natural_language_processing#:~:text=Natural%20language%20processing%20(NLP)%20is,amounts%20of%20natural%20language%20data." target="_blank">NLP</a>, <a href="https://en.wikipedia.org/wiki/Computer_vision" target="_blank">Computer Vision</a> and <a href="https://en.wikipedia.org/wiki/Robotics" target="_blank">Robotics</a> research, feel free to contact me.
 
-google_analytics: UA-XXXXXXXXX # out your google-analytics code
+google_analytics: G-GDXDM8QC54 # out your google-analytics code
 panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
 
 # -----------------------------------------------------------------------------
