@@ -9,5 +9,6 @@ group :jekyll_plugins do
     gem 'jemoji'
     gem 'unicode_utils'
     gem 'webrick'
+    gem 'kramdown-parser-gfm'
     # gem 'github-pages'
 end
