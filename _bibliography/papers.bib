@@ -1,26 +1,40 @@
-@misc{https://doi.org/10.48550/arxiv.2207.03333,
-  doi = {10.48550/ARXIV.2207.03333},
-  abbr = {Arxiv},
-  url = {https://arxiv.org/abs/2207.03333},
-  author = {P, Jishnu Jaykumar and Chao, Yu-Wei and Xiang, Yu},
-  keywords = {Computer Vision and Pattern Recognition (cs.CV), Artificial Intelligence (cs.AI), Machine Learning (cs.LG), Robotics (cs.RO), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  title = {FewSOL: A Dataset for Few-Shot Object Learning in Robotic Environments},
-  publisher = {arXiv},
-  year = {2022},
-  copyright = {Creative Commons Attribution 4.0 International},
-  pdf = {https://arxiv.org/pdf/2207.03333.pdf},
-  website = {https://irvlutd.github.io/FewSOL},
+@article{fewsol2023,
+  abbr = {IEEE ICRA},
+  title={Edge-detect: Edge-centric network intrusion detection using deep neural network},
   abstract = {We introduce the Few-Shot Object Learning (FewSOL) dataset for object recognition with a few images per object. We captured 336 real-world objects with 9 RGB-D images per object from different views. Object segmentation masks, object poses and object attributes are provided. In addition, synthetic images generated using 330 3D object models are used to augment the dataset. We investigated (i) few-shot object classification and (ii) joint object segmentation and few-shot classification with the state-of-the-art methods for few-shot learning and meta-learning using our dataset. The evaluation results show that there is still a large margin to be improved for few-shot object classification in robotic environments. Our dataset can be used to study a set of few-shot object recognition problems such as classification, detection and segmentation, shape reconstruction, pose estimation, keypoint correspondences and attribute recognition.},
-  keywords = {Robot Perception, Object Recognition, Few-Shot Learning, MetaLearning, Dataset Construction, Sim-to-Real},
-  code = {https://github.com/IRVLUTD/few-shot-dataset},
-  bibtex_show = {true}
+  publisher={IEEE ICRA},
+  bibtex_show={true},
+  author={P, Jishnu Jaykumar and Chao, Yu-Wei and Xiang, Yu},
+  journal={IEEE International Conference on Robotics and Automation (ICRA)},
+  year={2023},
+  organization={IEEE},
+  website = {https://irvlutd.github.io/FewSOL},
+  code = {https://github.com/IRVLUTD/few-shot-dataset}
 }
 
-@article{P:2021,
-	title = {[{Re}] {Improving} {Multi}-hop {Question} {Answering} over {Knowledge} {Graphs} using {Knowledge} {Base} {Embeddings}},
-	bibtex_show = {true},
+@article{met_2023, 
+abbr = {MET},
+author = {Chattopadhyay, Bhargab and Bandyopadhyay, Tathagata and Kelley, Ken and P, Jishnu},
+title = {A Sequential Approach for Noninferiority or Equivalence of a Linear Contrast Under Cost Constraints}, 
+journal = {Psychological Methods},
+year = {2023}, 
+month = {Feb},
+bibtex_show = {true}
+}
+
+@article{P2021,
 	abbr = {ReScience C},
+	title = {[{Re}] {Improving} {Multi}-hop {Question} {Answering} over {Knowledge} {Graphs} using {Knowledge} {Base} {Embeddings}},
+  abstract={Our work consists of four parts: (1) Reproducing results from Saxena et al. [2020] (2) Adding more experiments by
+replacing the knowledge graph embedding method (3) and exploring the question embedding method using various
+transformer models (4) Verifying the importance of Relation Matching (RM) module. Based on the code shared by
+the authors, we have reproduced the results for the EmbedKGQA method. We have not purposely performed relation
+matching to validate point-4.
+},
+  author = {P, Jishnu Jaykumar and Sardana, Ashish},
   journal = {ReScience C},
+  publisher = {ReScience C},
+	bibtex_show = {true},
 	url = {https://zenodo.org/record/4834942},
 	pdf = {https://zenodo.org/record/4834942/files/article.pdf},
 	doi = {10.5281/ZENODO.4834942},
@@ -29,20 +43,10 @@
 	issue = {2},
 	number = {#15},
 	code = {https://github.com/jishnujayakumar/MLRC2020-EmbedKGQA},
-  code_doi = {},
   code_swh = {swh:1:dir:c95bc4fec7023c258c7190975279b5baf6ef6725},
-  data_url = {},
-  data_doi = {},
   review_url = {https://openreview.net/forum?id=VFAwCMdWY7},
-  author = {P, Jishnu Jaykumar and Sardana, Ashish},
-	month = may,
+	month = {may},
 	year = {2021},
-	abstract={Our work consists of four parts: (1) Reproducing results from Saxena et al. [2020] (2) Adding more experiments by
-replacing the knowledge graph embedding method (3) and exploring the question embedding method using various
-transformer models (4) Verifying the importance of Relation Matching (RM) module. Based on the code shared by
-the authors, we have reproduced the results for the EmbedKGQA method. We have not purposely performed relation
-matching to validate point-4.
-},
   type = {Replication},
   language = {Python},
   domain = {ML Reproducibility Challenge 2020},
@@ -64,19 +68,18 @@ matching to validate point-4.
   code={https://github.com/racsa-lab/Edge-Detect}
 }
 
-@software{jishnu_p_2018_4422613,
-  author       = {Jishnu P and
-                  Praneet Singh},
-  title        = {{MV-Tractus: A simple tool to extract motion 
-                   vectors from H264 encoded video sources}},
-  month        = oct,
-  year         = 2018,
+@software{p_mvtractus_2018,
+  abbr         = {Zenodo},
+  title        = {MV-Tractus: A simple tool to extract motion vectors from H264 encoded video sources},
   publisher    = {Zenodo},
+  bibtex_show  = {true},
+  author       = {Jishnu P and Praneet Singh},
+  journal      = {Zenodo},
+  month        = {oct},
+  year         = {2018},
   version      = {2.0},
   doi          = {10.5281/zenodo.4422613},
-  bibtex_show  = {true},
   website      = {https://doi.org/10.5281/zenodo.4422613},
-  abbr         = {Zenodo},
   code         = {https://github.com/jishnujayakumar/MV-Tractus}
 }
 
@@ -88,14 +91,4 @@ matching to validate point-4.
   website = {http://www.rbccps.org/cyphyss2018/posters-and-demos/},
   poster = {https://drive.google.com/file/d/1lQV1N-gqOIh_1S3yiOnNDjykZOmqLfil},
   journal = {2nd Cyber-Physical Systems Symposium (CyPhySS), Indian Institute of Science, Bangalore}
-}
-
-@article{attaining_2017, 
-abbr = {Thesis},
-pdf = {https://zenodo.org/record/1235795/files/BTP_2017_Report.pdf},
-author = {Jishnu P and Abhijeet Panwar},
-title = {Attaining maximum power under cost constraints in single gene experiments}, 
-journal = {Baccalaureate Thesis},
-year = {2017}, 
-month = {may}
 }
