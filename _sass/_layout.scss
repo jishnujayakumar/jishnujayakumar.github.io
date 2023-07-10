@@ -2,21 +2,25 @@
  * Content
  ******************************************************************************/
 
- body {
-   padding-bottom: 70px;
-   color: var(--global-text-color);
-   background-color: var(--global-bg-color);
- }
+body {
+  padding-bottom: 70px;
+  color: var(--global-text-color);
+  background-color: var(--global-bg-color);
 
- body.fixed-top-nav {
-   // Add some padding for the nav-bar.
-   padding-top: 56px;
- }
+  h1, h2, h3, h4, h5, h6 {
+    scroll-margin-top: 66px;
+  }
+}
 
- body.sticky-bottom-footer {
-   // Remove padding below footer.
-   padding-bottom: 0;
- }
+body.fixed-top-nav {
+  // Add some padding for the nav-bar.
+  padding-top: 56px;
+}
+
+body.sticky-bottom-footer {
+  // Remove padding below footer.
+  padding-bottom: 0;
+}
 
 .container {
   max-width: $max-content-width;
@@ -29,42 +33,42 @@
   }
 }
 
+.address{
+  font-size: 1.2rem;
+}
+
+
 // TODO: redefine content layout.
-.news-badge{
-    background-color: var(--global-theme-color);
-    color: white;
-    padding-left: none;
-    padding-right: none;
-    padding: 5.2px;
-    font-size: 79%;
-    width: 85px;
-    // text-transform: uppercase;
-}
 
-.badge{
-    padding: 5.2px !important;
-    font-size: 79%;
-    width: 85px;
-}
-
-.publications ol.bibliography li .author > em {
-    border-bottom: none !important; 
-    font-style: normal !important;
-    font-weight: bold !important;
-    color: var(--global-theme-color) !important;
-}
-
-.publications ol.bibliography li .author > a{
-    color: var(--global-text-color) !important;
-    border-bottom: 1px dotted var(--global-text-color) !important;
-}
 
 /******************************************************************************
  * Publications
  ******************************************************************************/
 
 // TODO: redefine publications layout.
+.publications ol.bibliography li .author > em {
+  border-bottom: none !important;
+  font-style: normal !important;
+  font-weight: bold !important;
+  color: var(--global-theme-color) !important;
+}
 
+.publications ol.bibliography li .author > a {
+  color: var(--global-text-color) !important;
+}
+
+.publications ol.bibliography li .author a {
+  border-bottom: 1px dashed var(--global-text-color) !important;
+}
+
+.news-badge {
+  background-color: var(--global-theme-color);
+}
+
+.google-scholar-link {
+  color: var(--global-theme-color) !important;
+  font-weight: bold;
+}
 
 /*****************************************************************************
 * Projects
