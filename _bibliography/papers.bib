@@ -18,7 +18,7 @@
 
 @article{khargonkar2023scenereplica,
         title={SceneReplica: Benchmarking Real-World Robot Manipulation by Creating Reproducible Scenes}, 
-        author={Ninad Khargonkar and Sai Haneesh Allu and Yangxiao Lu and Jishnu Jaykumar P and Balakrishnan Prabhakaran and Yu Xiang},
+        author={Ninad Khargonkar* and Sai Haneesh Allu* and Yangxiao Lu and Jishnu Jaykumar P and Balakrishnan Prabhakaran and Yu Xiang},
         journal={arXiv preprint arXiv:2306.15620},
         year={2023},
         bibtex_show={true},
@@ -29,21 +29,23 @@
         abstract = {We present a new reproducible benchmark for evaluating robot manipulation in the real world, specifically focusing on the task of pick-and-place. Our benchmark uses the YCB objects, a commonly used dataset in the robotics community, to ensure that our results are comparable to other studies. Additionally, the benchmark is designed to be easily reproducible in the real world, making it accessible for researchers and practitioners. We also provide our experimental results and analyses for model-based and model-free 6D robotic grasping on the benchmark, where representative algorithms for object perception, grasping planning and motion planning are evaluated. We believe that our benchmark will be a valuable tool for advancing the field of robot manipulation. By providing a standardized evaluation framework, researchers can more easily compare different techniques and algorithms, leading to faster progress in developing robot manipulation methods.}
 }
 
-@article{p2023fewsol,
-  abbr = {IEEE ICRA},
-  title={FewSOL: A Dataset for Few-Shot Object Learning in Robotic Environments},
-  abstract = {We introduce the Few-Shot Object Learning (FewSOL) dataset for object recognition with a few images per object. We captured 336 real-world objects with 9 RGB-D images per object from different views. Object segmentation masks, object poses and object attributes are provided. In addition, synthetic images generated using 330 3D object models are used to augment the dataset. We investigated (i) few-shot object classification and (ii) joint object segmentation and few-shot classification with the state-of-the-art methods for few-shot learning and meta-learning using our dataset. The evaluation results show that there is still a large margin to be improved for few-shot object classification in robotic environments. Our dataset can be used to study a set of few-shot object recognition problems such as classification, detection and segmentation, shape reconstruction, pose estimation, keypoint correspondences and attribute recognition.},
-  bibtex_show={true},
+
+@INPROCEEDINGS{padalunkal2023fewsol,
   author={P, Jishnu Jaykumar and Chao, Yu-Wei and Xiang, Yu},
-  journal={IEEE International Conference on Robotics and Automation (ICRA)},
+  booktitle={2023 IEEE International Conference on Robotics and Automation (ICRA)}, 
+  title={FewSOL: A Dataset for Few-Shot Object Learning in Robotic Environments}, 
+  doi={10.1109/ICRA48891.2023.10161143},
+  pages={9140-9146},
   year={2023},
   website = {https://irvlutd.github.io/FewSOL},
   code = {https://github.com/IRVLUTD/few-shot-dataset},
   preview = {fewsol.webp},
   poster = {/assets/pdf/FewSOL/posters/ICRA2023_FewSOL_Poster.pdf},
   graphical_abstract = {/assets/pdf/FewSOL/FewSOL-ICRA23-Graphical-Abstract.pdf},
-  pdf = {https://arxiv.org/pdf/2207.03333.pdf}
+  pdf = {https://arxiv.org/pdf/2207.03333.pdf},
+  bibtex_show={true},
 }
+
 
 @article{chattopadhyay2023sequential,
   abbr={PsyMet},
