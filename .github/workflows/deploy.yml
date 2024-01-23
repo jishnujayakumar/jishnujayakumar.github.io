@@ -5,10 +5,12 @@ on:
     branches:
       - master
       - source
+      - gh-pages
   pull_request:
     branches:
       - master
       - source
+      - gh-pages
   workflow_dispatch:
 
 permissions:
