@@ -5,4 +5,4 @@ inline: true
 ---
 
 
-[NIDSNet](https://irvlutd.github.io/NIDSNet){:target="_blank"} is released.🌟
+[NIDSNet](https://irvlutd.github.io/NIDSNet){:target="_blank"} has been released! 🌟
