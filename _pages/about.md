@@ -11,7 +11,7 @@ profile:
 news: true  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
----
+--- 
 
 I am a third year Ph.D. candidate in the [Erik Jonsson School of Engineering and Computer Science](https://engineering.utdallas.edu){:target="_blank"} at the [University of Texas at Dallas](https://www.utdallas.edu){:target="_blank"}. I work at [Intelligent Robotics and Vision Lab](https://labs.utdallas.edu/irvl/){:target="_blank"}(IRVL) under [Dr. Yu Xiang](https://yuxng.github.io/){:target="_blank"}. Before this, I was an MSCS (Master’s in Computer Science) student at the same school from Fall 2021-Spring 2022.
 
