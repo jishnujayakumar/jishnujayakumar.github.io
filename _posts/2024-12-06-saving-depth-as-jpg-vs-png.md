@@ -17,7 +17,7 @@ categories: research robotics phd-life
 - [Index](#index)
 - [The Spark: A Quest for Compression](#the-spark-a-quest-for-compression)
 - [The Twist: Shaky 3D Scenes](#the-twist-shaky-3d-scenes)
-- [RGB + JPEG Depth Scene Point](#rgb--jpeg-depth-scene-point)
+- [RGB + JPEG Depth Scene Point Cloud](#rgb--jpeg-depth-scene-point-cloud)
 - [The Discovery: Switching to PNG](#the-discovery-switching-to-png)
 - [The Evidence: Videos and Point Clouds](#the-evidence-videos-and-point-clouds)
 - [Lessons Learned: Why PNG Wins](#lessons-learned-why-png-wins)
@@ -40,7 +40,7 @@ Things took an unexpected turn when I moved to the next phase: generating 3D sce
 Digging deeper, I realized that JPEG’s 8-bit storage capacity was the issue. Depth data, which demands high precision, was being constrained by the format’s limitations. Crucial details were lost, resulting in inaccuracies in the visualized 3D scenes.
 
 <img src="../../../assets/blog/jpg-vs-png/rgbd-jpeg-3d.gif" width="100%">
-<center>RGB + JPEG Depth Scene Point</center>
+<center>RGB + JPEG Depth Scene Point Cloud</center>
 ---
 
 ## The Discovery: Switching to PNG
@@ -53,7 +53,7 @@ What seemed like a minor choice of file format turned out to have a major impact
 
 
 <img src="../../../assets/blog/jpg-vs-png/rgbd-png-3d.gif" width="100%">
-<center>RGB + PNG Depth Scene Point</center>
+<center>RGB + PNG Depth Scene Point Cloud</center>
 
 ---
 
