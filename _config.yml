@@ -235,7 +235,6 @@ plugins:
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
-  - jekyll_video
 
 # Sitemap settings
 defaults:

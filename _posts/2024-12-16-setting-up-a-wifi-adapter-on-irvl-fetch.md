@@ -4,7 +4,7 @@ title: Setting Up a Wi-Fi Hotspot on Boot for Your Robot
 date: 16 Dec 2024
 description: Robots operating in environments without reliable network connectivity often require a self-hosted Wi-Fi hotspot for seamless operation. This blog post will guide you through creating a Wi-Fi hotspot on boot using a Linux-based system, ensuring uninterrupted communication with your robot.
 tags: robot wifi hotspot network system setup
-categories: research robotics tools sys_setup
+categories: research robotics phd-life sys_setup
 ---
 
 <img src="{{ site.baseurl }}/assets/blog/irvl-fetch-wifi-adapter-diy/alpha_adapter/robot-human-hololens.png" alt="robot-human-hololens" width="100%">
@@ -198,10 +198,10 @@ fi
 <center>
   <div style="display: flex; align-items: center;">
     <!-- Image Section: 30% Width -->
-    <img src="{{ site.baseurl }}/assets/blog/irvl-fetch-wifi-adapter-diy/alpha_adapter/step-5-out.png" alt="Step 5 Output" style="width: 50%; margin-right: 20px;">
+    <img src="{{ site.baseurl }}/assets/blog/irvl-fetch-wifi-adapter-diy/alpha_adapter/step-5-out.png" alt="Step 5 Output" style="width: 45%; margin-right: 20px;">
 
     <!-- Video Section: 65% Width -->
-    <video class="demo-video" width="65%" height="auto" controls>
+    <video class="demo-video" width="58%" height="auto" controls>
       <source src="../../../assets/blog/irvl-fetch-wifi-adapter-diy/alpha_adapter/connect-hololens2-to-robot-hotspot.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
