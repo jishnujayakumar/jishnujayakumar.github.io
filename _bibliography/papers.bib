@@ -32,20 +32,24 @@
   abstract = {Novel Instance Detection and Segmentation (NIDS) aims at detecting and segmenting novel object instances given a few examples of each instance. We propose a unified framework (NIDS-Net) comprising object proposal generation, embedding creation for both instance templates and proposal regions, and embedding matching for instance label assignment. Leveraging recent advancements in large vision methods, we utilize the Grounding DINO and Segment Anything Model (SAM) to obtain object proposals with accurate bounding boxes and masks. Central to our approach is the generation of high-quality instance embeddings. We utilize foreground feature averages of patch embeddings from the DINOv2 ViT backbone, followed by refinement through a weight adapter mechanism that we introduce. We show experimentally that our weight adapter can adjust the embeddings locally within their feature space and effectively limit overfitting. This methodology enables a straightforward matching strategy, resulting in significant performance gains. Our framework surpasses current state-of-the-art methods, demonstrating notable improvements of 22.3, 46.2, 10.3, and 24.0 in average precision (AP) across four detection datasets. In instance segmentation tasks on seven core datasets of the BOP challenge, our method outperforms the top RGB methods by 3.6 AP and remains competitive with the best RGB-D method.}
 }
 
-@article{padalunkal2023protoclip,
-    title={Proto-CLIP: Vision-Language Prototypical Network for Few-Shot Learning}, 
-    author={Jishnu Jaykumar P and Kamalesh Palanisamy and Yu-Wei Chao and Xinya Du and Yu Xiang},
-    journal={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-    year={2024},
-    bibtex_show={true},
-    website={https://irvlutd.github.io/Proto-CLIP},
-    code={https://github.com/IRVLUTD/Proto-CLIP},
-    preview={real-world.gif},
-    pdf = {https://arxiv.org/pdf/2307.03073.pdf},
-    abstract = {We propose a novel framework for few-shot learning by leveraging large-scale vision-language models such as CLIP. Motivated by the unimodal prototypical networks for few-shot learning, we introduce PROTO-CLIP that utilizes image prototypes and text prototypes for few-shot learning. Specifically, PROTO-CLIP adapts the image encoder and text encoder in CLIP in a joint fashion using few-shot examples. The two encoders are used to compute prototypes of image classes for classification. During adaptation, we propose aligning the image and text prototypes of corresponding classes. Such a proposed alignment is beneficial for few-shot classification due to the contributions from both types of prototypes. We demonstrate the effectiveness of our method by conducting experiments on benchmark datasets for few-shot learning as well as in the real world for robot perception.},
-    poster = {/assets/pdf/research/phd/Proto-CLIP/Proto_CLIP_IROS_2024_Poster.pdf},
-    graphical_abstract = {/assets/pdf/research/phd/Proto-CLIP/proto-clip-graphical-abstract.jpg},
-    slides = {/assets/pdf/research/phd/Proto-CLIP/IROS24_Proto-CLIP.pdf}
+
+@INPROCEEDINGS{padalunkal2024protoclip,
+  author={P, Jishnu Jaykumar and Palanisamy, Kamalesh and Chao, Yu-Wei and Du, Xinya and Xiang, Yu},
+  title={Proto-CLIP: Vision-Language Prototypical Network for Few-Shot Learning}, 
+  keywords={Training;Representation learning;Adaptation models;Three-dimensional displays;Prototypes;Benchmark testing;Object recognition;Few shot learning;Intelligent robots},
+  booktitle={2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
+  doi={10.1109/IROS58592.2024.10801660},
+  pages={2594-2601},
+  year={2024},
+  bibtex_show={true},
+  website={https://irvlutd.github.io/Proto-CLIP},
+  code={https://github.com/IRVLUTD/Proto-CLIP},
+  preview={real-world.gif},
+  pdf = {https://arxiv.org/pdf/2307.03073.pdf},
+  abstract = {We propose a novel framework for few-shot learning by leveraging large-scale vision-language models such as CLIP. Motivated by the unimodal prototypical networks for few-shot learning, we introduce PROTO-CLIP that utilizes image prototypes and text prototypes for few-shot learning. Specifically, PROTO-CLIP adapts the image encoder and text encoder in CLIP in a joint fashion using few-shot examples. The two encoders are used to compute prototypes of image classes for classification. During adaptation, we propose aligning the image and text prototypes of corresponding classes. Such a proposed alignment is beneficial for few-shot classification due to the contributions from both types of prototypes. We demonstrate the effectiveness of our method by conducting experiments on benchmark datasets for few-shot learning as well as in the real world for robot perception.},
+  poster = {/assets/pdf/research/phd/Proto-CLIP/Proto_CLIP_IROS_2024_Poster.pdf},
+  graphical_abstract = {/assets/pdf/research/phd/Proto-CLIP/proto-clip-graphical-abstract.jpg},
+  slides = {/assets/pdf/research/phd/Proto-CLIP/IROS24_Proto-CLIP.pdf}
 }
 
 @INPROCEEDINGS{khargonkar2024scenereplica,
