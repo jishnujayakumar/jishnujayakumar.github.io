@@ -1,6 +1,6 @@
 ---
 layout: post
-date: Apr 4, 2026
+date: Apr 3, 2026
 title: HRT1 Presentation at TEROS 2026
 inline: true
 ---
