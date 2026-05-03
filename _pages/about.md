@@ -18,4 +18,5 @@ Before I joined UTD, I worked as a Research Intern under the supervision of [Dr.
 
 My research focuses on embodied perception and learning from humans. I develop few-shot and multimodal learning frameworks that enable robots to understand and adapt to real-world environments from vision, language, and human demonstrations, with an emphasis on building foundation models for perception and mobile manipulation.
 
-<strong style="color:#f30000">I am always open to mentoring motivated MS and undergraduate students interested in robot/deep learning research. If you have strong programming skills and enthusiasm for research, feel free to reach out via email.</strong><br>
+<!-- Mentoring note hidden for now -->
+<!-- <strong style="color:#f30000">I am always open to mentoring motivated MS and undergraduate students interested in robot/deep learning research. If you have strong programming skills and enthusiasm for research, feel free to reach out via email.</strong><br> -->
