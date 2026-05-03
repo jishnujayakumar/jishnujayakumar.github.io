@@ -267,8 +267,8 @@ body.sticky-bottom-footer {
 
   // Year heading — small uppercase eyebrow, not a screaming h2
   h2.year {
-    margin: 2.25rem 0 1rem;
-    padding-bottom: 0.4rem;
+    margin: 3rem 0 1.5rem;
+    padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--global-divider-color);
     font-size: 0.85rem;
     font-weight: 700;
@@ -276,25 +276,47 @@ body.sticky-bottom-footer {
     text-transform: uppercase;
     color: var(--global-text-color-light);
 
-    &:first-of-type { margin-top: 1rem; }
+    &:first-of-type { margin-top: 1.25rem; }
   }
 
   ol.bibliography li {
-    margin-bottom: 1.4rem;
+    margin-bottom: 2.25rem;
+    padding: 0.25rem 0;
+    transition: transform 0.2s ease;
+
+    // Preview thumbnail: rounded, soft shadow, gentle hover
+    .preview, img.preview, figure picture {
+      border-radius: 6px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    img.preview, .preview img {
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    }
+
+    &:hover {
+      img.preview, .preview img {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transform: translateY(-1px);
+      }
+    }
 
     // Title: prominent but not bold-screaming
     .title {
       font-weight: 600;
-      font-size: 1.05rem;
+      font-size: 1.06rem;
       line-height: 1.35;
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.3rem;
+      letter-spacing: -0.005em;
     }
 
     // Author line: self in theme color, others plain
     .author {
       font-size: 0.93rem;
-      line-height: 1.45;
+      line-height: 1.5;
       color: var(--global-text-color);
+      margin-bottom: 0.15rem;
 
       > em {
         border-bottom: none !important;
@@ -307,6 +329,7 @@ body.sticky-bottom-footer {
       a {
         color: var(--global-text-color) !important;
         border-bottom: none !important;
+        transition: color 0.2s ease;
 
         &:hover {
           color: var(--global-theme-color) !important;
@@ -317,6 +340,13 @@ body.sticky-bottom-footer {
         color: var(--global-text-color-light);
         border-bottom: 1px dashed var(--global-text-color-light);
         font-size: 0.88rem;
+        cursor: pointer;
+        transition: color 0.2s ease, border-color 0.2s ease;
+
+        &:hover {
+          color: var(--global-theme-color);
+          border-bottom-color: var(--global-theme-color);
+        }
       }
     }
 
@@ -324,7 +354,7 @@ body.sticky-bottom-footer {
     .periodical {
       font-size: 0.88rem;
       color: var(--global-text-color-light);
-      line-height: 1.4;
+      line-height: 1.45;
 
       em { font-style: italic; }
 
@@ -333,28 +363,47 @@ body.sticky-bottom-footer {
 
     // Links row: text-link style, no borders, tight gaps
     .links {
-      margin-top: 0.45rem;
+      margin-top: 0.6rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.85rem;
+      gap: 1rem;
 
       a.btn {
         padding: 0 !important;
         margin: 0 !important;
         border: none !important;
         background: transparent !important;
-        font-size: 0.82rem;
-        font-weight: 500;
-        letter-spacing: 0.02em;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
         color: var(--global-theme-color) !important;
         text-transform: uppercase;
         line-height: 1.4;
         box-shadow: none !important;
+        position: relative;
+        transition: color 0.2s ease;
 
         &:hover {
           color: var(--global-hover-color, var(--global-theme-color)) !important;
-          text-decoration: underline;
+          text-decoration: none;
           background: transparent !important;
+
+          &::after {
+            transform: scaleX(1);
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -2px;
+          height: 1px;
+          background: var(--global-theme-color);
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.25s ease;
         }
       }
     }
