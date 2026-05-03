@@ -77,17 +77,24 @@ body.sticky-bottom-footer {
 
 .misc-page {
 
-  .misc-section {
-    margin-bottom: 3.5rem;
+  .misc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
 
-    & + .misc-section {
-      padding-top: 2rem;
-      border-top: 1px solid var(--global-divider-color);
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
     }
   }
 
+  .misc-section {
+    margin-bottom: 0;
+  }
+
   .misc-section-header {
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.25rem;
 
     h2 {
       margin: 0 0 0.35rem;
@@ -122,33 +129,34 @@ body.sticky-bottom-footer {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 1.1rem;
+    gap: 0.7rem;
   }
 
   .course-row {
     display: grid;
-    grid-template-columns: 130px 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 95px 1fr;
+    gap: 1rem;
     align-items: start;
 
     @media (max-width: 576px) {
       grid-template-columns: 1fr;
-      gap: 0.4rem;
+      gap: 0.25rem;
     }
   }
 
   .term {
     margin: 0;
-    padding-top: 0.15rem;
-    font-size: 0.85rem;
+    padding-top: 0.1rem;
+    font-size: 0.82rem;
     font-weight: 600;
     letter-spacing: 0.02em;
     color: var(--global-text-color-light);
     text-align: right;
+    white-space: nowrap;
 
     @media (max-width: 576px) {
       text-align: left;
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
@@ -158,12 +166,13 @@ body.sticky-bottom-footer {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.45rem;
+    gap: 0.35rem;
   }
 
   .course {
     display: inline;
-    line-height: 1.55;
+    line-height: 1.5;
+    font-size: 0.93rem;
 
     .course-code {
       display: inline-block;
@@ -224,12 +233,12 @@ body.sticky-bottom-footer {
   /* ----- Presentations ----- */
 
   .talks-group {
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.25rem;
   }
 
   .talks-group-title {
-    margin: 0 0 0.85rem;
-    font-size: 0.78rem;
+    margin: 0 0 0.5rem;
+    font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -247,19 +256,20 @@ body.sticky-bottom-footer {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    gap: 1rem;
-    padding: 0.7rem 0;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
     border-bottom: 1px solid var(--global-divider-color);
 
     @media (max-width: 576px) {
       flex-direction: column;
       align-items: flex-start;
-      gap: 0.35rem;
+      gap: 0.25rem;
     }
   }
 
   .talk-title {
     flex: 1 1 auto;
+    font-size: 0.93rem;
     font-weight: 500;
     color: var(--global-text-color);
     border-bottom: 1px dashed transparent;
