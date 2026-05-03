@@ -2,6 +2,18 @@
   - firstname: [ "Ken", "K. ", "K" ]
     url: https://scholar.google.com/citations?user=G9JORkUAAAAJ&hl=en&oi=ao
 
+"Ruozzi":
+  - firstname: [ "Nicholas", "N.", "N" ]
+    url: https://scholar.google.com/citations?user=kzmSnEQAAAAJ&hl=en
+
+"Yao":
+  - firstname: [ "Jian", "J.", "J" ]
+    url: https://scholar.google.com/citations?user=V3kGMXUAAAAJ&hl=en
+
+"Summers":
+  - firstname: [ "Tyler", "T.", "T" ]
+    url: https://scholar.google.com/citations?user=AoAcNkAAAAAJ&hl=en
+
 "Chattopadhyay":
   - firstname: [ "Bhargab", "B. ", "B" ]
     url: https://scholar.google.com/citations?user=PTS3aeAAAAAJ&hl=en&oi=ao

@@ -277,8 +277,8 @@ display_categories: ['blockquotes'] # these categories will be displayed on the 
 
 scholar:
 
-  last_name: P
-  first_name: [ "Jishnu" , "P.", "J.", "P.P.J.", "Jishnu Jaykumar", "J"]
+  last_name: [P, Padalunkal]
+  first_name: [ "Jishnu" , "P.", "J.", "P.P.J.", "Jishnu Jaykumar", "Jishnu J", "J"]
 
   style: apa
   locale: en
