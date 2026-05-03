@@ -87,6 +87,23 @@ body.sticky-bottom-footer {
  ******************************************************************************/
 
 .misc-page {
+  .misc-toc {
+    margin: 0 0 2rem;
+    padding: 0.6rem 0.85rem;
+    border-left: 3px solid var(--global-divider-color);
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+
+    strong {
+      color: var(--global-text-color);
+      margin-right: 0.3rem;
+    }
+
+    a { color: var(--global-text-color); }
+    a:hover { color: var(--global-theme-color); }
+  }
+
   h2 { margin-top: 2.25rem; }
   h2:first-of-type { margin-top: 1rem; }
   h3 { margin-top: 1.5rem; font-size: 1.05rem; }
