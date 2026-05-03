@@ -87,39 +87,98 @@ body.sticky-bottom-footer {
  ******************************************************************************/
 
 .misc-page {
+  // Table of contents — subtle nav strip
   .misc-toc {
-    margin: 0 0 2rem;
-    padding: 0.6rem 0.85rem;
-    border-left: 3px solid var(--global-divider-color);
+    margin: 0 0 2.5rem;
+    padding: 0.7rem 1.1rem;
+    background: rgba(127, 127, 127, 0.07);
+    border-radius: 6px;
     color: var(--global-text-color-light);
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 0.88rem;
+    line-height: 1.7;
 
     strong {
       color: var(--global-text-color);
-      margin-right: 0.3rem;
+      margin-right: 0.4rem;
+      font-weight: 600;
     }
 
-    a { color: var(--global-text-color); }
-    a:hover { color: var(--global-theme-color); }
+    a {
+      color: var(--global-text-color);
+      transition: color 0.2s ease;
+      &:hover { color: var(--global-theme-color); }
+    }
   }
 
-  h2 { margin-top: 2.25rem; }
-  h2:first-of-type { margin-top: 1rem; }
-  h3 { margin-top: 1.5rem; font-size: 1.05rem; }
+  // h2 — section heading with theme-color accent underline
+  h2 {
+    margin: 2.75rem 0 0.6rem;
+    padding-bottom: 0.45rem;
+    font-size: 1.55rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    border-bottom: 1px solid var(--global-divider-color);
+    position: relative;
 
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 36px;
+      height: 2px;
+      background: var(--global-theme-color);
+    }
+  }
+
+  h2:first-of-type { margin-top: 0.5rem; }
+
+  // Section lead paragraph (immediately after h2)
+  h2 + p {
+    color: var(--global-text-color-light);
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+  // h3 — small uppercase eyebrow
+  h3 {
+    margin: 2rem 0 0.6rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+  }
+
+  // Lists — breathing room + muted marker
   ul {
-    margin: 0.5rem 0 1rem;
-    padding-left: 1.4rem;
+    margin: 0.5rem 0 1.5rem;
+    padding-left: 1.5rem;
 
     ul {
-      margin: 0.25rem 0 0.5rem;
+      margin: 0.45rem 0 0.5rem;
+      padding-left: 1.25rem;
     }
   }
 
   li {
-    line-height: 1.55;
-    margin-bottom: 0.2rem;
+    line-height: 1.65;
+    margin-bottom: 0.45rem;
+
+    &::marker {
+      color: var(--global-text-color-light);
+    }
+
+    // Term emphasis (the leading <strong>Spring 2025</strong>)
+    > strong:first-child {
+      font-weight: 600;
+      color: var(--global-text-color);
+    }
+
+    a {
+      transition: color 0.2s ease;
+      &:hover { color: var(--global-theme-color); }
+    }
   }
 }
 
