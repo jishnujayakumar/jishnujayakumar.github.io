@@ -361,49 +361,32 @@ body.sticky-bottom-footer {
       &:empty { display: none; }
     }
 
-    // Links row: text-link style, no borders, tight gaps
+    // Links row: small chips, clearly clickable
     .links {
-      margin-top: 0.6rem;
+      margin-top: 0.7rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.45rem;
 
       a.btn {
-        padding: 0 !important;
+        padding: 0.18rem 0.7rem !important;
         margin: 0 !important;
-        border: none !important;
+        border: 1px solid var(--global-theme-color) !important;
+        border-radius: 4px;
         background: transparent !important;
-        font-size: 0.78rem;
+        font-size: 0.75rem;
         font-weight: 600;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.05em;
         color: var(--global-theme-color) !important;
         text-transform: uppercase;
         line-height: 1.4;
         box-shadow: none !important;
-        position: relative;
-        transition: color 0.2s ease;
+        transition: background 0.2s ease, color 0.2s ease;
 
         &:hover {
-          color: var(--global-hover-color, var(--global-theme-color)) !important;
+          background: var(--global-theme-color) !important;
+          color: var(--global-bg-color) !important;
           text-decoration: none;
-          background: transparent !important;
-
-          &::after {
-            transform: scaleX(1);
-          }
-        }
-
-        &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: -2px;
-          height: 1px;
-          background: var(--global-theme-color);
-          transform: scaleX(0);
-          transform-origin: left;
-          transition: transform 0.25s ease;
         }
       }
     }
