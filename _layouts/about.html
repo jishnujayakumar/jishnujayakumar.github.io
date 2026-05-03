@@ -12,6 +12,13 @@ layout: default
         </header>
 
         <article>
+          {%- if site.contact_note %}
+          <div class="seeking-banner" role="note">
+            <span class="seeking-tag">Open to opportunities</span>
+            <span class="seeking-text">{{ site.contact_note }}</span>
+          </div>
+          {%- endif %}
+
           {% if page.profile -%}
           <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
             {%- if page.profile.image %}
@@ -65,14 +72,7 @@ layout: default
             {%- include selected_papers.html %}
           {%- endif %}
 
-          <!-- Social -->
-          {%- if page.social and site.contact_note %}
-            <div class="social">
-              <div class="contact-note">
-                {{ site.contact_note }}
-              </div>
-            </div>
-          {%- endif %}
+          <!-- Social: contact_note moved to top banner -->
         </article>
 
 </div>

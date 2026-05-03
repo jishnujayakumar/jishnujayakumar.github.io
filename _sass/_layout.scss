@@ -70,6 +70,43 @@ body.sticky-bottom-footer {
   font-size: 1.2rem;
 }
 
+// "Open to opportunities" banner above the bio
+.seeking-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 1.5rem 0;
+  padding: 0.85rem 1.1rem;
+  border-left: 4px solid var(--global-theme-color);
+  background: rgba(var(--global-theme-color-rgb, 67, 97, 238), 0.06);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+
+  .seeking-tag {
+    flex-shrink: 0;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--global-theme-color);
+    border: 1.5px solid var(--global-theme-color);
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+    white-space: nowrap;
+  }
+
+  .seeking-text {
+    color: var(--global-text-color);
+  }
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
 
 // TODO: redefine content layout.
 
