@@ -70,6 +70,255 @@ body.sticky-bottom-footer {
   font-size: 1.2rem;
 }
 
+
+/******************************************************************************
+ * Misc page (Teaching + Presentations)
+ ******************************************************************************/
+
+.misc-page {
+
+  .misc-section {
+    margin-bottom: 3.5rem;
+
+    & + .misc-section {
+      padding-top: 2rem;
+      border-top: 1px solid var(--global-divider-color);
+    }
+  }
+
+  .misc-section-header {
+    margin-bottom: 1.75rem;
+
+    h2 {
+      margin: 0 0 0.35rem;
+      font-weight: 600;
+    }
+
+    .misc-section-lead {
+      margin: 0;
+      color: var(--global-text-color-light);
+      font-size: 0.95rem;
+
+      code {
+        background: rgba(128, 128, 128, 0.1);
+        padding: 0 0.3rem;
+        border-radius: 3px;
+        font-size: 0.85em;
+      }
+
+      .legend {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        margin-left: 0.6rem;
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  /* ----- Teaching ----- */
+
+  .course-list {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+
+  .course-row {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+      gap: 0.4rem;
+    }
+  }
+
+  .term {
+    margin: 0;
+    padding-top: 0.15rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--global-text-color-light);
+    text-align: right;
+
+    @media (max-width: 576px) {
+      text-align: left;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  .course-cell {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .course {
+    display: inline;
+    line-height: 1.55;
+
+    .course-code {
+      display: inline-block;
+      margin-right: 0.55rem;
+      padding: 0.08rem 0.45rem;
+      font-family: monospace;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      color: var(--global-text-color-light);
+      background: rgba(128, 128, 128, 0.1);
+      border-radius: 4px;
+      vertical-align: 0.06em;
+      white-space: nowrap;
+    }
+
+    .course-code.grad {
+      color: var(--global-theme-color);
+      background: rgba(var(--global-theme-color-rgb, 67, 97, 238), 0.12);
+    }
+
+    .course-title {
+      font-weight: 500;
+    }
+
+    a.course-title {
+      color: var(--global-text-color);
+      border-bottom: 1px dashed var(--global-text-color-light);
+
+      &:hover {
+        color: var(--global-theme-color);
+        border-bottom-color: var(--global-theme-color);
+      }
+    }
+
+    .instructor {
+      color: var(--global-text-color-light);
+      font-size: 0.92rem;
+
+      &::before {
+        content: "·";
+        margin: 0 0.35rem;
+        color: var(--global-text-color-light);
+      }
+
+      a {
+        color: inherit;
+        border-bottom: 1px dotted var(--global-text-color-light);
+
+        &:hover {
+          color: var(--global-theme-color);
+          border-bottom-color: var(--global-theme-color);
+        }
+      }
+    }
+  }
+
+  /* ----- Presentations ----- */
+
+  .talks-group {
+    margin-bottom: 1.75rem;
+  }
+
+  .talks-group-title {
+    margin: 0 0 0.85rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+  }
+
+  .talks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--global-divider-color);
+  }
+
+  .talk {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.35rem;
+    }
+  }
+
+  .talk-title {
+    flex: 1 1 auto;
+    font-weight: 500;
+    color: var(--global-text-color);
+    border-bottom: 1px dashed transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      color: var(--global-theme-color);
+      border-bottom-color: var(--global-theme-color);
+    }
+  }
+
+  .talk-meta {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    white-space: nowrap;
+
+    @media (max-width: 576px) {
+      white-space: normal;
+    }
+  }
+
+  .talk-term {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+
+    a {
+      color: inherit;
+      border-bottom: 1px dotted var(--global-text-color-light);
+
+      &:hover {
+        color: var(--global-theme-color);
+        border-bottom-color: var(--global-theme-color);
+      }
+    }
+  }
+
+  .award-pill {
+    display: inline-block;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border-radius: 999px;
+    white-space: nowrap;
+
+    &.best {
+      color: #8a6d00;
+      background: rgba(255, 199, 44, 0.18);
+    }
+
+    &.nominee {
+      color: #6b6b6b;
+      background: rgba(180, 180, 180, 0.2);
+    }
+  }
+}
+
 // "Open to opportunities" banner above the bio
 .seeking-banner {
   display: flex;
