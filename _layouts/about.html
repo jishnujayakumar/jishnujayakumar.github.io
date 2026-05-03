@@ -12,13 +12,6 @@ layout: default
         </header>
 
         <article>
-          {%- if site.contact_note %}
-          <div class="seeking-banner" role="note">
-            <span class="seeking-tag">Open to opportunities</span>
-            <span class="seeking-text">{{ site.contact_note }}</span>
-          </div>
-          {%- endif %}
-
           {% if page.profile -%}
           <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
             {%- if page.profile.image %}
