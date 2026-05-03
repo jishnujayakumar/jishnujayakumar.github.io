@@ -12,7 +12,9 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 --- 
 
-I&rsquo;m a fourth-year PhD student at [UT Dallas](https://www.utdallas.edu){:target="_blank"}, working on robot learning with [Yu Xiang](https://yuxng.github.io/){:target="_blank"} at [IRVL](https://labs.utdallas.edu/irvl/){:target="_blank"}. I started as an MS student in Fall 2021 and switched to the PhD program after my first year. ***I am on the job market and exploring research scientist roles for robotics.***
+I&rsquo;m a fourth-year PhD student at [UT Dallas](https://www.utdallas.edu){:target="_blank"}, working on robot learning with [Yu Xiang](https://yuxng.github.io/){:target="_blank"} at [IRVL](https://labs.utdallas.edu/irvl/){:target="_blank"}. I started as an MS student in Fall 2021 and switched to the PhD program after my first year.
+
+***I am on the job market and exploring research scientist roles for robotics.***
 
 I work on making robots learn from minimal supervision &mdash; few-shot examples (a few photos of an object) and from humans (one demonstration video, a few minutes of correction) &mdash; and I try to run them on real hardware, not just in simulation. My PhD thesis pulls four projects together: [FewSOL](https://irvlutd.github.io/FewSOL/){:target="_blank"} (ICRA 2023), [Proto-CLIP](https://irvlutd.github.io/Proto-CLIP/){:target="_blank"} (IROS 2024), [iTeach](https://irvlutd.github.io/iTeach/){:target="_blank"}, and [HRT1](https://irvlutd.github.io/HRT1/){:target="_blank"}.
 
