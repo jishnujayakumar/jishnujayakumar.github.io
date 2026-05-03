@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href="#">UTD . RAI &bull; IIT Kharagpur &bull; NVIDIA &bull; IISc &bull; IIIT Vadodara</a>
+subtitle: <a href="#">UTD &bull; RAI &bull; IIT Kharagpur &bull; NVIDIA &bull; IISc &bull; IIIT Vadodara</a>
 profile:
   align: right
   image: prof_pic.jpg
