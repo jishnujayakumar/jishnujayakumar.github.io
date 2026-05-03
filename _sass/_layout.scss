@@ -51,6 +51,17 @@ body.sticky-bottom-footer {
           color: var(--global-theme-color);
         }
       }
+
+      a.cv-link {
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        padding: 0.05rem 0.4rem;
+        border: 1.5px solid currentColor;
+        border-radius: 4px;
+        vertical-align: 0.18em;
+        text-decoration: none;
+      }
     }
   }
 }
