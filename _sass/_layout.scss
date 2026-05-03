@@ -290,20 +290,110 @@ body.sticky-bottom-footer {
  * Publications
  ******************************************************************************/
 
-// TODO: redefine publications layout.
-.publications ol.bibliography li .author > em {
-  border-bottom: none !important;
-  font-style: normal !important;
-  font-weight: bold !important;
-  color: var(--global-theme-color) !important;
-}
+.publications {
 
-.publications ol.bibliography li .author > a {
-  color: var(--global-text-color) !important;
-}
+  // Year heading — small uppercase eyebrow, not a screaming h2
+  h2.year {
+    margin: 2.25rem 0 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
 
-.publications ol.bibliography li .author a {
-  border-bottom: 1px dashed var(--global-text-color) !important;
+    &:first-of-type { margin-top: 1rem; }
+  }
+
+  ol.bibliography li {
+    margin-bottom: 1.4rem;
+
+    // Title: prominent but not bold-screaming
+    .title {
+      font-weight: 600;
+      font-size: 1.05rem;
+      line-height: 1.35;
+      margin-bottom: 0.2rem;
+    }
+
+    // Author line: self in theme color, others plain
+    .author {
+      font-size: 0.93rem;
+      line-height: 1.45;
+      color: var(--global-text-color);
+
+      > em {
+        border-bottom: none !important;
+        font-style: normal !important;
+        font-weight: 600 !important;
+        color: var(--global-theme-color) !important;
+      }
+
+      > a,
+      a {
+        color: var(--global-text-color) !important;
+        border-bottom: none !important;
+
+        &:hover {
+          color: var(--global-theme-color) !important;
+        }
+      }
+
+      > span.more-authors {
+        color: var(--global-text-color-light);
+        border-bottom: 1px dashed var(--global-text-color-light);
+        font-size: 0.88rem;
+      }
+    }
+
+    // Periodical (journal/booktitle, year/month) — muted, small
+    .periodical {
+      font-size: 0.88rem;
+      color: var(--global-text-color-light);
+      line-height: 1.4;
+
+      em { font-style: italic; }
+
+      &:empty { display: none; }
+    }
+
+    // Links row: text-link style, no borders, tight gaps
+    .links {
+      margin-top: 0.45rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+
+      a.btn {
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        background: transparent !important;
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        color: var(--global-theme-color) !important;
+        text-transform: uppercase;
+        line-height: 1.4;
+        box-shadow: none !important;
+
+        &:hover {
+          color: var(--global-hover-color, var(--global-theme-color)) !important;
+          text-decoration: underline;
+          background: transparent !important;
+        }
+      }
+    }
+
+    // Abbr badge (when no preview): smaller, tighter
+    .abbr abbr {
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      padding: 0.1rem 0.6rem !important;
+      border-radius: 3px;
+    }
+  }
 }
 
 .news-badge {
@@ -312,7 +402,7 @@ body.sticky-bottom-footer {
 
 .google-scholar-link {
   color: var(--global-theme-color) !important;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 /*****************************************************************************
