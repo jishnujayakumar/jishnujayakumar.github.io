@@ -5,6 +5,7 @@ title: Publications
 description: "<a href='https://scholar.google.com/citations?user=08esT74AAAAJ&hl=en&&sortby=pubdate' target='_blank'><b class='google-scholar-link'>Google Scholar</b></a> | * denotes equal contribution and joint lead authorship."
 years: [ 2026, 2025, 2024, 2023, 2021, 2018 ]
 nav: true
+nav_order: 1
 ---
 
 <div class="publications">
