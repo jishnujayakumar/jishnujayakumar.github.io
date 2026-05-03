@@ -119,15 +119,13 @@
           {%- capture entrytype -%}{%- endcapture -%}
         {%- endif -%}
         {%- comment -%}
-          Show only the publication year on the periodical line; month is
-          always dropped. Reset to empty strings first — Liquid `capture`
-          retains values across loop iterations otherwise.
+          Year and month are dropped on the periodical line; entries are
+          already grouped under their year heading on the publications page.
+          Reset to empty strings first — Liquid `capture` retains values
+          across loop iterations otherwise.
         {%- endcomment -%}
         {%- assign entrymonth = "" -%}
         {%- assign entryyear = "" -%}
-        {%- if entry.year -%}
-          {%- capture entryyear -%}{{ " " }}{{entry.year}}{%- endcapture -%}
-        {%- endif -%}
         {% assign entrytype_text = entrytype | strip_html | strip %}
         {%- capture periodical -%}{{ entrytype }}{%- if entrytype_text != "" and entryyear != "" -%}, {%- endif -%}{{ entrymonth }}{{ entryyear }}{%- endcapture -%}
         <div class="periodical">
