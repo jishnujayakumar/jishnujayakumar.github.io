@@ -118,10 +118,28 @@
         {%- else -%}
           {%- capture entrytype -%}{%- endcapture -%}
         {%- endif -%}
-        {%- if entry.month -%}
+        {%- comment -%}
+          Show month/year only for arXiv preprints and software/misc entries.
+          Accepted papers are grouped under the year heading already, and the
+          IEEE-style booktitle no longer carries the year prefix — so the
+          month/year noise is dropped from the periodical line.
+
+          IMPORTANT: assign empty strings first — Liquid `capture` retains
+          values across loop iterations otherwise.
+        {%- endcomment -%}
+        {%- assign entrymonth = "" -%}
+        {%- assign entryyear = "" -%}
+        {%- assign show_date = false -%}
+        {%- if entry.type == "software" or entry.type == "misc" or entry.type == "unpublished" -%}
+          {%- assign show_date = true -%}
+        {%- endif -%}
+        {%- if entry.journal == "arXiv" or entry.journal == "arxiv" -%}
+          {%- assign show_date = true -%}
+        {%- endif -%}
+        {%- if show_date and entry.month -%}
           {%- capture entrymonth -%}{{ " " }}{{ entry.month | capitalize }}{%- endcapture -%}
         {%- endif -%}
-        {%- if entry.year -%}
+        {%- if show_date and entry.year -%}
           {%- capture entryyear -%}{{ " " }}{{entry.year}}{%- endcapture -%}
         {%- endif -%}
         {% assign entrytype_text = entrytype | strip_html | strip %}
