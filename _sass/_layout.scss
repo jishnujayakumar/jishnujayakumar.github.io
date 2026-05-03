@@ -37,12 +37,18 @@ body.sticky-bottom-footer {
     text-align: center;
 
     .contact-icons {
-      font-size: 1.4rem;
-      line-height: 1.6;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 1.25rem;
+      line-height: 1;
 
       a {
-        display: inline-block;
-        margin: 0 0.35rem;
+        display: inline-flex;
+        align-items: center;
+        margin: 0;
         color: var(--global-text-color);
         transition: transform 0.25s ease, color 0.25s ease;
 
@@ -53,14 +59,14 @@ body.sticky-bottom-footer {
       }
 
       a.cv-link {
-        font-size: 0.85rem;
+        font-size: 0.72rem;
         font-weight: 600;
         letter-spacing: 0.04em;
-        padding: 0.05rem 0.4rem;
+        padding: 0.1rem 0.35rem;
         border: 1.5px solid currentColor;
         border-radius: 4px;
-        vertical-align: 0.18em;
         text-decoration: none;
+        line-height: 1.1;
       }
     }
   }
