@@ -260,11 +260,13 @@ body.sticky-bottom-footer {
       > a,
       a {
         color: var(--global-text-color) !important;
-        border-bottom: none !important;
-        transition: color 0.2s ease;
+        border-bottom: 1px dashed var(--global-text-color-light) !important;
+        transition: color 0.2s ease, border-color 0.2s ease;
 
         &:hover {
           color: var(--global-theme-color) !important;
+          border-bottom-color: var(--global-theme-color) !important;
+          border-bottom-style: solid !important;
         }
       }
 
