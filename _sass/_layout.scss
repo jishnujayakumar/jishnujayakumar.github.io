@@ -83,176 +83,26 @@ body.sticky-bottom-footer {
 
 
 /******************************************************************************
- * Misc page (Teaching + Presentations)
+ * Misc page (Teaching + Presentations) — plain Karpathy-style lists
  ******************************************************************************/
 
 .misc-page {
+  h2 { margin-top: 2.25rem; }
+  h2:first-of-type { margin-top: 1rem; }
+  h3 { margin-top: 1.5rem; font-size: 1.05rem; }
 
-  .misc-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+  ul {
+    margin: 0.5rem 0 1rem;
+    padding-left: 1.4rem;
 
-    @media (min-width: 768px) {
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
+    ul {
+      margin: 0.25rem 0 0.5rem;
     }
   }
 
-  .misc-section {
-    margin-bottom: 0;
-  }
-
-  #presentations { order: 1; }
-  #teaching      { order: 2; }
-
-  .misc-section-header {
-    margin-bottom: 1.25rem;
-
-    h2 {
-      margin: 0 0 0.35rem;
-      font-weight: 600;
-    }
-
-    .misc-section-lead {
-      margin: 0;
-      color: var(--global-text-color-light);
-      font-size: 0.95rem;
-
-      code {
-        background: rgba(128, 128, 128, 0.1);
-        padding: 0 0.3rem;
-        border-radius: 3px;
-        font-size: 0.85em;
-      }
-
-      .legend {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.35rem;
-        margin-left: 0.6rem;
-        font-size: 0.85rem;
-      }
-    }
-  }
-
-  /* ----- Teaching ----- */
-
-  .course-list {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-  }
-
-  .course-row {
-    display: grid;
-    grid-template-columns: 95px 1fr;
-    gap: 1rem;
-    align-items: start;
-
-    @media (max-width: 576px) {
-      grid-template-columns: 1fr;
-      gap: 0.25rem;
-    }
-  }
-
-  .term {
-    margin: 0;
-    padding-top: 0.1rem;
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    color: var(--global-text-color-light);
-    text-align: right;
-    white-space: nowrap;
-
-    @media (max-width: 576px) {
-      text-align: left;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-  }
-
-  .course-cell {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-  }
-
-  .course {
-    display: inline;
-    line-height: 1.5;
-    font-size: 0.93rem;
-
-    .course-code {
-      margin-right: 0.4rem;
-      padding: 0;
-      background: none;
-      font-family: monospace;
-      font-size: 0.85rem;
-      color: var(--global-text-color-light);
-    }
-
-    .instructor {
-      color: var(--global-text-color-light);
-      font-size: 0.9rem;
-
-      &::before {
-        content: "·";
-        margin: 0 0.3rem;
-      }
-    }
-  }
-
-  /* ----- Presentations ----- */
-
-  .talks-group {
-    margin-bottom: 1.25rem;
-  }
-
-  .talks-group-title {
-    margin: 0 0 0.5rem;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--global-text-color-light);
-  }
-
-  .talks {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border-top: 1px solid var(--global-divider-color);
-  }
-
-  .talk {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 0.75rem;
-    margin-bottom: 0.4rem;
-
-    @media (max-width: 576px) {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.15rem;
-    }
-  }
-
-  .talk-title {
-    flex: 1 1 auto;
-    font-size: 0.93rem;
-  }
-
-  .talk-term {
-    flex-shrink: 0;
-    font-size: 0.85rem;
-    color: var(--global-text-color-light);
+  li {
+    line-height: 1.55;
+    margin-bottom: 0.2rem;
   }
 }
 
