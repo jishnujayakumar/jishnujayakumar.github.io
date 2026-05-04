@@ -2,6 +2,7 @@
 layout: about
 title: About
 permalink: /
+seo_description: PhD student at UT Dallas (IRVL) working on robot learning from few examples and humans. Graduating 2027 — open to research scientist roles in industry.
 subtitle: <strong>Research:</strong> <a href="/publications/">Robot learning from few examples and humans</a>
 profile:
   align: right

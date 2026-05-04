@@ -36,7 +36,7 @@
     {%- endif -%}
     </title>
     <meta name="author" content="{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}" />
-    <meta name="description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{{ site.description }}{%- endif -%}" />
+    <meta name="description" content="{%- if page.seo_description -%}{{ page.seo_description }}{%- elsif page.description -%}{{ page.description | strip_html | strip }}{%- else -%}{{ site.description }}{%- endif -%}" />
 {%- if page.keywords or site.keywords %}
     <meta name="keywords" content="{%- if page.keywords -%}{{ page.keywords }}{%- else -%}{{ site.keywords }}{%- endif -%}" />
 {%- endif %}
@@ -48,18 +48,25 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{%- if page.title -%}{{ title }} | {{ page.title }}{%- else -%}{{ title }}{%- endif -%}" />
     <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}" />
-    <meta property="og:description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{{ site.description }}{%- endif -%}" />
-    {% if page.og_image or site.og_image -%}
-    <meta property="og:image" content="{%- if page.og_image -%}{{ page.og_image }}{%- else -%}{{ site.og_image }}{%- endif -%}" />
+    <meta property="og:description" content="{%- if page.seo_description -%}{{ page.seo_description }}{%- elsif page.description -%}{{ page.description | strip_html | strip }}{%- else -%}{{ site.description }}{%- endif -%}" />
+    {%- assign og_image_src = page.og_image | default: site.og_image -%}
+    {%- if og_image_src -%}
+      {%- unless og_image_src contains '://' -%}
+        {%- assign og_image_src = og_image_src | absolute_url -%}
+      {%- endunless -%}
+    {%- endif %}
+    {% if og_image_src -%}
+    <meta property="og:image" content="{{ og_image_src }}" />
+    <meta property="og:image:alt" content="{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}" />
     {%- endif %}
     <meta property="og:locale" content="{{ site.lang }}" />
 
     <!-- Twitter card -->
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="{% if og_image_src %}summary_large_image{% else %}summary{% endif %}" />
     <meta name="twitter:title" content="{%- if page.title -%}{{ page.title }}{%- else -%}{{ title }}{%- endif -%}" />
-    <meta name="twitter:description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{{ site.description }}{%- endif -%}" />
-    {% if page.og_image or site.og_image -%}
-    <meta name="twitter:image" content="{%- if page.og_image -%}{{ page.og_image }}{%- else -%}{{ site.og_image }}{%- endif -%}" />
+    <meta name="twitter:description" content="{%- if page.seo_description -%}{{ page.seo_description }}{%- elsif page.description -%}{{ page.description | strip_html | strip }}{%- else -%}{{ site.description }}{%- endif -%}" />
+    {% if og_image_src -%}
+    <meta name="twitter:image" content="{{ og_image_src }}" />
     {%- endif %}
     {% if site.x_username  -%}
     <meta name="twitter:site" content="@{{ site.x_username  }}" />
@@ -188,26 +195,58 @@
         {%- capture link -%}https://discord.com/users/{{ site.discord_id }}{%- endcapture -%}
         {%- assign sameaslinks = sameaslinks | push: link -%}
     {%- endif -%}
-    {%- if sameaslinks != blank -%}
-        {%- assign sameaslinks = sameaslinks | split: "" -%}
-    {%- endif -%}
+    {%- comment -%}Keep sameaslinks as a real array so jsonify outputs valid JSON.{%- endcomment -%}
 
+    {%- assign person_name = site.first_name | append: ' ' | append: site.middle_name | append: ' ' | append: site.last_name | strip -%}
+    {%- capture person_image -%}{{ '/assets/img/prof_pic.jpg' | absolute_url }}{%- endcapture -%}
+    {%- capture page_abs_url -%}{{ page.url | replace: 'index.html', '' | absolute_url }}{%- endcapture -%}
+
+    <!-- Schema.org: Person (always present, helps Google's knowledge panel) -->
     <script type="application/ld+json">
-      {
-        "author":
-        {
-          "@type": "Person",
-          "name": "{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}"
-        },
-        "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ person_name }}",
+      "givenName": "{{ site.first_name }}",
+      "additionalName": "{{ site.middle_name }}",
+      "familyName": "{{ site.last_name }}",
+      "url": "{{ '/' | absolute_url }}",
+      "image": "{{ person_image }}",
+      "jobTitle": "PhD Student in Computer Science",
+      "description": "{{ site.description | strip_html | strip }}",
+      "worksFor": {
+        "@type": "CollegeOrUniversity",
+        "name": "The University of Texas at Dallas",
+        "url": "https://www.utdallas.edu"
+      },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Indian Institute of Information Technology Vadodara", "url": "https://iiitvadodara.ac.in/" },
+        { "@type": "CollegeOrUniversity", "name": "Indian Institute of Science",                       "url": "https://www.iisc.ac.in/" },
+        { "@type": "CollegeOrUniversity", "name": "Indian Institute of Technology Kharagpur",          "url": "https://www.iitkgp.ac.in/" }
+      ]{% if sameaslinks != blank %},
+      "sameAs": {{ sameaslinks | jsonify }}{% endif %}
+    }
+    </script>
+
+    <!-- Schema.org: WebSite/WebPage (per-page metadata for crawlers) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "{% if page.url == '/' %}ProfilePage{% else %}WebPage{% endif %}",
+      "url": "{{ page_abs_url }}",
+      "name": "{%- if page.title and page.url != '/' -%}{{ page.title }} | {{ person_name }}{%- else -%}{{ person_name }}{%- endif -%}",
+      "description": "{%- if page.seo_description -%}{{ page.seo_description }}{%- elsif page.description -%}{{ page.description | strip_html | strip }}{%- else -%}{{ site.description | strip_html | strip }}{%- endif -%}",
+      "inLanguage": "{{ site.lang }}",
+      "isPartOf": {
         "@type": "WebSite",
-        "description": "{%- if page.description -%}{{ page.description }}{%- else if site.description -%}{{ site.description }}{%- endif -%}",
-        "headline": "{%- if page.title -%}{{ page.title }}{%- else -%}{{ site.title }}{%- endif -%}",
-        {% if sameaslinks != blank -%}
-        "sameAs": {{ sameaslinks }},
-        {%- endif %}
-        "name": "{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}",
-        "@context": "https://schema.org"
+        "url": "{{ '/' | absolute_url }}",
+        "name": "{{ person_name }}"
+      },
+      "about": {
+        "@type": "Person",
+        "name": "{{ person_name }}",
+        "url": "{{ '/' | absolute_url }}"
       }
+    }
     </script>
 {%- endif %}
