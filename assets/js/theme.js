@@ -9,38 +9,34 @@ let toggleTheme = (theme) => {
 };
 
 let setTheme = (theme, animate = true) => {
+  if (theme !== "light" && theme !== "dark") theme = "light";
   if (animate) transTheme();
   setHighlight(theme);
   setGiscusTheme(theme);
 
-  if (theme) {
-    document.documentElement.setAttribute("data-theme", theme);
+  document.documentElement.setAttribute("data-theme", theme);
 
-    // Add class to tables.
-    let tables = document.getElementsByTagName("table");
-    for (let i = 0; i < tables.length; i++) {
-      if (theme == "dark") {
-        tables[i].classList.add("table-dark");
-      } else {
-        tables[i].classList.remove("table-dark");
-      }
+  // Add class to tables.
+  let tables = document.getElementsByTagName("table");
+  for (let i = 0; i < tables.length; i++) {
+    if (theme == "dark") {
+      tables[i].classList.add("table-dark");
+    } else {
+      tables[i].classList.remove("table-dark");
     }
+  }
 
-    // Set jupyter notebooks themes.
-    let jupyterNotebooks = document.getElementsByClassName("jupyter-notebook-iframe-container");
-    for (let i = 0; i < jupyterNotebooks.length; i++) {
-      let bodyElement = jupyterNotebooks[i].getElementsByTagName("iframe")[0].contentWindow.document.body;
-      if (theme == "dark") {
-        bodyElement.setAttribute("data-jp-theme-light", "false");
-        bodyElement.setAttribute("data-jp-theme-name", "JupyterLab Dark");
-      } else {
-        bodyElement.setAttribute("data-jp-theme-light", "true");
-        bodyElement.setAttribute("data-jp-theme-name", "JupyterLab Light");
-      }
+  // Set jupyter notebooks themes.
+  let jupyterNotebooks = document.getElementsByClassName("jupyter-notebook-iframe-container");
+  for (let i = 0; i < jupyterNotebooks.length; i++) {
+    let bodyElement = jupyterNotebooks[i].getElementsByTagName("iframe")[0].contentWindow.document.body;
+    if (theme == "dark") {
+      bodyElement.setAttribute("data-jp-theme-light", "false");
+      bodyElement.setAttribute("data-jp-theme-name", "JupyterLab Dark");
+    } else {
+      bodyElement.setAttribute("data-jp-theme-light", "true");
+      bodyElement.setAttribute("data-jp-theme-name", "JupyterLab Light");
     }
-
-  } else {
-    document.documentElement.removeAttribute("data-theme");
   }
 
   localStorage.setItem("theme", theme);
@@ -90,15 +86,9 @@ let transTheme = () => {
   }, 500);
 };
 
-let initTheme = (theme) => {
-  if (theme == null || theme == "null") {
-    const userPref = window.matchMedia;
-    if (userPref && userPref("(prefers-color-scheme: dark)").matches) {
-      theme = "dark";
-    }
-  }
-
-  setTheme(theme, false);
-};
-
-initTheme(localStorage.getItem("theme"));
+// Theme is already applied to <html data-theme=...> by the inline bootstrap in head.html.
+// Here we only sync side effects (highlight CSS, giscus, tables, jupyter) without animating.
+setTheme(
+  document.documentElement.getAttribute("data-theme") || localStorage.getItem("theme"),
+  false
+);
