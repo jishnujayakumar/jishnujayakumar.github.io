@@ -82,6 +82,44 @@ body.sticky-bottom-footer {
 }
 
 
+// Typewriter suffix on the about-page name: types "adalunkal" after
+// the static "Jishnu Jaykumar P" on first paint.
+.typewriter-suffix {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  white-space: nowrap;
+  width: 0;
+  border-right: 2px solid currentColor;
+  animation:
+    typewriter-suffix-type 1.6s steps(9, end) 0.4s forwards,
+    typewriter-suffix-caret 0.7s step-end 0.4s 4,
+    typewriter-suffix-caret-hide 0s linear 3.2s forwards;
+}
+
+@keyframes typewriter-suffix-type {
+  from { width: 0; }
+  to   { width: 9ch; }
+}
+
+@keyframes typewriter-suffix-caret {
+  50% { border-right-color: transparent; }
+}
+
+@keyframes typewriter-suffix-caret-hide {
+  to { border-right-color: transparent; }
+}
+
+// Don't animate on print or when user prefers reduced motion
+@media print, (prefers-reduced-motion: reduce) {
+  .typewriter-suffix {
+    width: auto !important;
+    border-right: none !important;
+    animation: none !important;
+  }
+}
+
+
 
 // Affiliations strip on the about page — institutional logos
 // (Sebastin minimal-research-theme pattern: grayscale logos, name + years)
