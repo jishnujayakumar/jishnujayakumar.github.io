@@ -109,13 +109,11 @@ body.sticky-bottom-footer {
     height: 50px;
     width: auto;
     max-width: 100%;
-    filter: grayscale(100%) opacity(0.85);
-    transition: filter 0.25s ease, transform 0.25s ease;
+    transition: transform 0.25s ease;
   }
 
   .affiliation:hover .instilogo {
-    filter: grayscale(0%) opacity(1);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
   }
 
   .institution {
