@@ -185,14 +185,15 @@ html.typewriter-skip .typewriter-suffix {
 }
 
 .affiliations {
-  // 6 explicit equal-width columns instead of flex:1, so cell widths can't
-  // drift with content. Each .affiliation is a vertical stack with a fixed
-  // logo "row" and a fixed institution-name "row" — that's the trick to
-  // killing the mobile roller-coaster look.
+  // Outer grid: 6 equal-width columns × 3 explicit rows (logo, name, years).
+  // Each .affiliation participates in the OUTER grid's rows via subgrid, so
+  // the logo row, name row, and years row all share heights across all 6
+  // cells — no per-cell drift, no roller-coaster.
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  align-items: end;
-  gap: clamp(0.3rem, 1.4vw, 0.6rem);
+  grid-template-rows: auto auto auto;
+  column-gap: clamp(0.3rem, 1.4vw, 0.6rem);
+  row-gap: clamp(0.2rem, 0.6vw, 0.4rem);
   clear: both;
   width: 100%;
   margin: 1.25rem 0 0.5rem;
@@ -201,27 +202,35 @@ html.typewriter-skip .typewriter-suffix {
   border-bottom: 1px solid var(--global-divider-color);
 
   .affiliation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 0;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: 1 / -1;
     text-align: center;
+    min-width: 0;
 
     a {
-      display: block;
-      border: none;
-      // Logo "row" — fixed visual height so logos with different aspect
-      // ratios all sit in the same band; bottom-aligned so the visible
-      // baseline is consistent across the strip.
+      // Logo cell — bottom-aligned so logos with different aspect ratios
+      // sit on the same baseline across the strip.
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      height: clamp(28px, 7vw, 50px);
+      grid-row: 1;
+      border: none;
+    }
+
+    .institution {
+      grid-row: 2;
+      align-self: start;
+    }
+
+    .years {
+      grid-row: 3;
+      align-self: start;
     }
   }
 
   .instilogo {
-    height: clamp(20px, 5.5vw, 42px);
+    height: clamp(22px, 6vw, 42px);
     width: auto;
     max-width: 100%;
     filter: grayscale(0.15);
@@ -240,41 +249,45 @@ html.typewriter-skip .typewriter-suffix {
   // legible against the dark background.
   html[data-theme='dark'] & .instilogo {
     background: #ffffff;
-    padding: 4px 6px;
+    padding: 3px 5px;
     border-radius: 5px;
     box-sizing: content-box;
   }
 
   .institution {
-    margin-top: clamp(0.3rem, 1vw, 0.5rem);
-    // Fixed two-line slot: short names ("NVIDIA") and longer ones
-    // ("RBCCPS · IISc") all consume the same vertical band, so the
-    // .years row below stays perfectly aligned across all 6 cells.
-    min-height: 2.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: clamp(0.55rem, 1.6vw, 0.76rem);
+    font-size: clamp(0.5rem, 1.6vw, 0.76rem);
     font-weight: 500;
     color: var(--global-text-color);
-    line-height: 1.25;
-    letter-spacing: 0.01em;
+    line-height: 1.2;
+    letter-spacing: 0.005em;
     text-wrap: balance;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
   .years {
-    margin-top: 0.1rem;
-    font-size: clamp(0.5rem, 1.4vw, 0.7rem);
+    font-size: clamp(0.45rem, 1.3vw, 0.7rem);
     color: var(--global-text-color-light);
-    line-height: 1.3;
+    line-height: 1.2;
     letter-spacing: 0.04em;
     white-space: nowrap;
   }
 
-  // Phones: just tighten the chrome; sizes scale via clamp() above.
   @media (max-width: 576px) {
     padding: 0.9rem 0;
     margin: 1rem 0 0.25rem;
+  }
+
+  // Fallback for browsers without subgrid support: just use min-heights.
+  @supports not (grid-template-rows: subgrid) {
+    .affiliation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      a { height: clamp(28px, 7vw, 50px); }
+      .institution { min-height: 2.4em; display: flex; align-items: center; }
+    }
   }
 }
 
