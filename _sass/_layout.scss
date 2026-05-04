@@ -55,16 +55,16 @@ body.sticky-bottom-footer {
       flex-wrap: nowrap;
       justify-content: center;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.5rem;
       padding: 0.15rem 0.25rem;
-      font-size: 0.95rem;
+      font-size: 1.25rem;
       line-height: 1;
 
       // The profile column is narrow; on phones tighten gap + shrink icons
       // so all 7 (email, CV, ORCID, Scholar, GitHub, LinkedIn, X) fit on one row.
       @media (max-width: 576px) {
-        gap: 0.25rem;
-        font-size: 0.8rem;
+        gap: 0.35rem;
+        font-size: 1.1rem;
       }
 
       a {
@@ -82,16 +82,6 @@ body.sticky-bottom-footer {
         }
       }
 
-      a.cv-link {
-        font-size: 0.85rem;
-        font-weight: 600;
-        letter-spacing: 0.04em;
-        padding: 0.15rem 0.45rem;
-        border: 1.5px solid currentColor;
-        border-radius: 4px;
-        text-decoration: none;
-        line-height: 1.1;
-      }
     }
   }
 }
