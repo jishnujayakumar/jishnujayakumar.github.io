@@ -57,12 +57,15 @@ let setTheme = (theme) => {
 };
 
 let setHighlight = (theme) => {
+  let lightEl = document.getElementById("highlight_theme_light");
+  let darkEl = document.getElementById("highlight_theme_dark");
+  if (!lightEl || !darkEl) return;
   if (theme == "dark") {
-    document.getElementById("highlight_theme_light").media = "none";
-    document.getElementById("highlight_theme_dark").media = "";
+    lightEl.media = "none";
+    darkEl.media = "";
   } else {
-    document.getElementById("highlight_theme_dark").media = "none";
-    document.getElementById("highlight_theme_light").media = "";
+    darkEl.media = "none";
+    lightEl.media = "";
   }
 };
 

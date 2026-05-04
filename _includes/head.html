@@ -30,6 +30,22 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
+    <!-- Theme bootstrap: apply saved theme synchronously, before paint.
+         Inlined here so localStorage is read on every page load and
+         data-theme is set before any CSS variable resolution. -->
+    <script>
+      (function() {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t && t !== 'null') {
+            document.documentElement.setAttribute('data-theme', t);
+          } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) { /* localStorage unavailable; fall through */ }
+      })();
+    </script>
+
     <!-- Typewriter: play once per session. Inline so it runs before paint
          (no flicker between the "width: 0" initial state and the played-class override). -->
     <script>
