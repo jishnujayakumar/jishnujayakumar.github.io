@@ -55,16 +55,16 @@ body.sticky-bottom-footer {
       flex-wrap: nowrap;
       justify-content: center;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
       padding: 0.15rem 0.25rem;
-      font-size: 1.15rem;
+      font-size: 0.95rem;
       line-height: 1;
 
       // The profile column is narrow; on phones tighten gap + shrink icons
       // so all 7 (email, CV, ORCID, Scholar, GitHub, LinkedIn, X) fit on one row.
       @media (max-width: 576px) {
-        gap: 0.3rem;
-        font-size: 0.95rem;
+        gap: 0.25rem;
+        font-size: 0.8rem;
       }
 
       a {
@@ -153,10 +153,10 @@ html.typewriter-skip .typewriter-suffix {
 // (Sebastin minimal-research-theme pattern: grayscale logos, name + years)
 .affiliations {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 1.5rem 0.75rem;
+  gap: 0.5rem;
   margin: 2.25rem 0 1rem;
   padding: 1.5rem 0;
   border-top: 1px solid var(--global-divider-color);
@@ -164,7 +164,7 @@ html.typewriter-skip .typewriter-suffix {
 
   .affiliation {
     flex: 1 1 0;
-    min-width: 110px;
+    min-width: 0;
     text-align: center;
 
     a {
@@ -174,20 +174,19 @@ html.typewriter-skip .typewriter-suffix {
   }
 
   .instilogo {
-    height: 50px;
+    height: 44px;
     width: auto;
     max-width: 100%;
     transition: transform 0.25s ease, background 0.25s ease;
   }
 
-  // Phones: shrink so more logos fit per row instead of stacking 2-per-row.
+  // Phones: shrink everything so all 6 logos still fit on one row.
   @media (max-width: 576px) {
-    gap: 1rem 0.5rem;
+    gap: 0.3rem;
     padding: 1rem 0;
-    .affiliation { min-width: 80px; }
-    .instilogo  { height: 36px; }
-    .institution { font-size: 0.7rem; }
-    .years       { font-size: 0.65rem; }
+    .instilogo  { height: 28px; }
+    .institution { font-size: 0.6rem; }
+    .years       { font-size: 0.55rem; }
   }
 
   .affiliation:hover .instilogo {
