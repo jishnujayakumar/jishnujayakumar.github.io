@@ -16,7 +16,7 @@ I&rsquo;m a fourth-year PhD student at [UT Dallas](https://www.utdallas.edu){:ta
 
 🎓 ***I&rsquo;m graduating in 2027 and looking for full-time research scientist positions in industry.***
 
-I work on making robots that learn from minimal supervision &mdash; few-shot examples (a few photos of an object) and from humans (one demonstration video, a few iterations of guidance/correction) &mdash; and I try to run them on real hardware, not just in simulation. My PhD thesis pulls four projects together: [FewSOL](https://irvlutd.github.io/FewSOL/){:target="_blank"} (ICRA 2023), [Proto-CLIP](https://irvlutd.github.io/Proto-CLIP/){:target="_blank"} (IROS 2024), [iTeach](https://irvlutd.github.io/iTeach/){:target="_blank"} (under submission), and [HRT1](https://irvlutd.github.io/HRT1/){:target="_blank"} (under submission).
+I work on robots that learn from minimal supervision &mdash; either few-shot examples (a few photos of an object) or input from humans (one demonstration video, a few iterations of guidance/correction). The work runs on real hardware, not just in simulation. My PhD thesis brings four such projects together: [FewSOL](https://irvlutd.github.io/FewSOL/){:target="_blank"} (ICRA 2023), [Proto-CLIP](https://irvlutd.github.io/Proto-CLIP/){:target="_blank"} (IROS 2024), [iTeach](https://irvlutd.github.io/iTeach/){:target="_blank"} (under submission), and [HRT1](https://irvlutd.github.io/HRT1/){:target="_blank"} (under submission).
 
 <div class="affiliations">
   <div class="affiliation">
