@@ -6,10 +6,20 @@ body {
   padding-bottom: 70px;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
+  // Prevent any rogue child element (long URL, oversized image, wide table)
+  // from triggering horizontal scroll on phones.
+  overflow-x: hidden;
 
   h1, h2, h3, h4, h5, h6 {
     scroll-margin-top: 66px;
   }
+}
+
+// Wrap long unbroken strings (URLs, paper titles) inside content so they
+// don't push the layout sideways on narrow viewports.
+.post, article {
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 body.fixed-top-nav {
@@ -168,6 +178,16 @@ html.typewriter-skip .typewriter-suffix {
     width: auto;
     max-width: 100%;
     transition: transform 0.25s ease, background 0.25s ease;
+  }
+
+  // Phones: shrink so more logos fit per row instead of stacking 2-per-row.
+  @media (max-width: 576px) {
+    gap: 1rem 0.5rem;
+    padding: 1rem 0;
+    .affiliation { min-width: 80px; }
+    .instilogo  { height: 36px; }
+    .institution { font-size: 0.7rem; }
+    .years       { font-size: 0.65rem; }
   }
 
   .affiliation:hover .instilogo {
