@@ -165,6 +165,65 @@ body.sticky-bottom-footer {
     &:first-of-type { margin-top: 1.25rem; }
   }
 
+  // Teaching: course-centric catalog. One row per unique course.
+  //   [code]  Title · with Instructor
+  //           Term · Term · Term
+  dl.course-catalog {
+    margin: 0.75rem 0 1.5rem;
+
+    .course-row {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 1.1rem;
+      align-items: baseline;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid var(--global-divider-color);
+
+      &:last-child { border-bottom: none; }
+
+      @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+      }
+    }
+
+    dt.code {
+      margin: 0;
+      font-family: monospace;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      color: var(--global-text-color-light);
+      text-align: right;
+      white-space: nowrap;
+
+      @media (max-width: 576px) {
+        text-align: left;
+      }
+    }
+
+    dd.course-meta {
+      margin: 0;
+
+      .title {
+        margin: 0 0 0.15rem;
+        line-height: 1.4;
+
+        a {
+          transition: color 0.2s ease;
+          &:hover { color: var(--global-theme-color); }
+        }
+      }
+
+      .terms {
+        margin: 0;
+        font-size: 0.82rem;
+        color: var(--global-text-color-light);
+        line-height: 1.4;
+      }
+    }
+  }
+
   // Generic lists — breathing room + muted marker
   ul {
     margin: 0.5rem 0 1.5rem;
