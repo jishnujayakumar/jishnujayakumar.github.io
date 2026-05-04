@@ -55,11 +55,13 @@ body.sticky-bottom-footer {
         align-items: center;
         margin: 0;
         color: var(--global-text-color);
+        text-decoration: none;
         transition: transform 0.25s ease, color 0.25s ease;
 
-        &:hover {
+        &:hover, &:focus {
           transform: scale(1.2) translateY(-2px);
           color: var(--global-theme-color);
+          text-decoration: none;
         }
       }
 
