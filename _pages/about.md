@@ -58,7 +58,7 @@ Before UTD I was a research intern at [NVIDIA](https://www.nvidia.com/en-in){:ta
   </div>
   <div class="affiliation">
     <a href="https://rai-inst.com/" target="_blank" rel="noopener">
-      <img class="instilogo" src="{{ '/assets/img/affiliations/rai.svg' | relative_url }}" alt="RAI Institute">
+      <img class="instilogo" src="{{ '/assets/img/affiliations/rai.jpg' | relative_url }}" alt="RAI Institute">
     </a>
     <div class="institution">RAI Institute</div>
     <div class="years">2025</div>
