@@ -202,51 +202,8 @@
     {%- capture page_abs_url -%}{{ page.url | replace: 'index.html', '' | absolute_url }}{%- endcapture -%}
 
     <!-- Schema.org: Person (always present, helps Google's knowledge panel) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "{{ person_name }}",
-      "givenName": "{{ site.first_name }}",
-      "additionalName": "{{ site.middle_name }}",
-      "familyName": "{{ site.last_name }}",
-      "url": "{{ '/' | absolute_url }}",
-      "image": "{{ person_image }}",
-      "jobTitle": "PhD Student in Computer Science",
-      "description": "{{ site.description | strip_html | strip }}",
-      "worksFor": {
-        "@type": "CollegeOrUniversity",
-        "name": "The University of Texas at Dallas",
-        "url": "https://www.utdallas.edu"
-      },
-      "alumniOf": [
-        { "@type": "CollegeOrUniversity", "name": "Indian Institute of Information Technology Vadodara", "url": "https://iiitvadodara.ac.in/" },
-        { "@type": "CollegeOrUniversity", "name": "Indian Institute of Science",                       "url": "https://www.iisc.ac.in/" },
-        { "@type": "CollegeOrUniversity", "name": "Indian Institute of Technology Kharagpur",          "url": "https://www.iitkgp.ac.in/" }
-      ]{% if sameaslinks != blank %},
-      "sameAs": {{ sameaslinks | jsonify }}{% endif %}
-    }
-    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"{{ person_name }}","givenName":"{{ site.first_name }}","additionalName":"{{ site.middle_name }}","familyName":"{{ site.last_name }}","url":"{{ '/' | absolute_url }}","image":"{{ person_image }}","jobTitle":"PhD Student in Computer Science","description":"{{ site.description | strip_html | strip }}","worksFor":{"@type":"CollegeOrUniversity","name":"The University of Texas at Dallas","url":"https://www.utdallas.edu"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"Indian Institute of Information Technology Vadodara","url":"https://iiitvadodara.ac.in/"},{"@type":"CollegeOrUniversity","name":"Indian Institute of Science","url":"https://www.iisc.ac.in/"},{"@type":"CollegeOrUniversity","name":"Indian Institute of Technology Kharagpur","url":"https://www.iitkgp.ac.in/"}]{% if sameaslinks != blank %},"sameAs":{{ sameaslinks | jsonify }}{% endif %}}</script>
 
     <!-- Schema.org: WebSite/WebPage (per-page metadata for crawlers) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "{% if page.url == '/' %}ProfilePage{% else %}WebPage{% endif %}",
-      "url": "{{ page_abs_url }}",
-      "name": "{%- if page.title and page.url != '/' -%}{{ page.title }} | {{ person_name }}{%- else -%}{{ person_name }}{%- endif -%}",
-      "description": "{%- if page.seo_description -%}{{ page.seo_description }}{%- elsif page.description -%}{{ page.description | strip_html | strip }}{%- else -%}{{ site.description | strip_html | strip }}{%- endif -%}",
-      "inLanguage": "{{ site.lang }}",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "{{ '/' | absolute_url }}",
-        "name": "{{ person_name }}"
-      },
-      "about": {
-        "@type": "Person",
-        "name": "{{ person_name }}",
-        "url": "{{ '/' | absolute_url }}"
-      }
-    }
-    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"{% if page.url == '/' %}ProfilePage{% else %}WebPage{% endif %}","url":"{{ page_abs_url }}","name":"{%- if page.title and page.url != '/' -%}{{ page.title }} | {{ person_name }}{%- else -%}{{ person_name }}{%- endif -%}","description":"{%- if page.seo_description -%}{{ page.seo_description }}{%- elsif page.description -%}{{ page.description | strip_html | strip }}{%- else -%}{{ site.description | strip_html | strip }}{%- endif -%}","inLanguage":"{{ site.lang }}","isPartOf":{"@type":"WebSite","url":"{{ '/' | absolute_url }}","name":"{{ person_name }}"},"about":{"@type":"Person","name":"{{ person_name }}","url":"{{ '/' | absolute_url }}"}}</script>
 {%- endif %}
