@@ -49,7 +49,7 @@ I work on making robots learn from minimal supervision &mdash; few-shot examples
   </div>
   <div class="affiliation">
     <a href="https://www.utdallas.edu/" target="_blank" rel="noopener">
-      <img class="instilogo" src="{{ '/assets/img/affiliations/utd.png' | relative_url }}" alt="UT Dallas">
+      <img class="instilogo" src="{{ '/assets/img/affiliations/utd.jpg' | relative_url }}" alt="UT Dallas">
     </a>
     <div class="institution">UT Dallas</div>
     <div class="years">2021 &mdash; Present</div>
