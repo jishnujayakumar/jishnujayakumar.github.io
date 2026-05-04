@@ -136,10 +136,10 @@ html.typewriter-skip .typewriter-suffix {
 // (Sebastin minimal-research-theme pattern: grayscale logos, name + years)
 .affiliations {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 1.5rem 0.75rem;
+  gap: 0.5rem;
   margin: 2.25rem 0 1rem;
   padding: 1.5rem 0;
   border-top: 1px solid var(--global-divider-color);
@@ -147,7 +147,7 @@ html.typewriter-skip .typewriter-suffix {
 
   .affiliation {
     flex: 1 1 0;
-    min-width: 110px;
+    min-width: 0;
     text-align: center;
 
     a {
@@ -157,10 +157,18 @@ html.typewriter-skip .typewriter-suffix {
   }
 
   .instilogo {
-    height: 50px;
+    height: 44px;
     width: auto;
     max-width: 100%;
     transition: transform 0.25s ease, background 0.25s ease;
+  }
+
+  // Narrow phones: shrink logos further so all 6 still fit on one row.
+  @media (max-width: 480px) {
+    gap: 0.3rem;
+    .instilogo { height: 30px; }
+    .institution { font-size: 0.65rem; }
+    .years { font-size: 0.6rem; }
   }
 
   .affiliation:hover .instilogo {
