@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <strong>Research:</strong> <a href="#">Robot learning from few examples and humans</a>
+subtitle: <strong>Research:</strong> <a href="/publications/">Robot learning from few examples and humans</a>
 profile:
   align: right
   image: prof_pic.jpg
