@@ -81,6 +81,20 @@ body.sticky-bottom-footer {
   font-size: 1.2rem;
 }
 
+// About-page subtitle (post-header .desc) — slightly larger
+.post-header .desc {
+  font-size: 1.15rem;
+  line-height: 1.45;
+
+  strong { font-weight: 600; }
+
+  a {
+    color: var(--global-text-color);
+    transition: color 0.2s ease;
+    &:hover { color: var(--global-theme-color); }
+  }
+}
+
 
 // Affiliations strip on the about page — institutional logos
 // (Sebastin minimal-research-theme pattern: grayscale logos, name + years)
