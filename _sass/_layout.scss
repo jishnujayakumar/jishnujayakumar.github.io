@@ -185,33 +185,43 @@ html.typewriter-skip .typewriter-suffix {
 }
 
 .affiliations {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 0.5rem;
+  // 6 explicit equal-width columns instead of flex:1, so cell widths can't
+  // drift with content. Each .affiliation is a vertical stack with a fixed
+  // logo "row" and a fixed institution-name "row" — that's the trick to
+  // killing the mobile roller-coaster look.
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: end;
+  gap: clamp(0.3rem, 1.4vw, 0.6rem);
   clear: both;
   width: 100%;
-  // Sit close to the bio above (no big buffer) but with breathing room
-  // below before news. No top border — it created a hard visual break.
   margin: 1.25rem 0 0.5rem;
   padding: 1.25rem 0 1rem;
   border-top: 1px solid var(--global-divider-color);
   border-bottom: 1px solid var(--global-divider-color);
 
   .affiliation {
-    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     min-width: 0;
     text-align: center;
 
     a {
-      display: inline-block;
+      display: block;
       border: none;
+      // Logo "row" — fixed visual height so logos with different aspect
+      // ratios all sit in the same band; bottom-aligned so the visible
+      // baseline is consistent across the strip.
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      height: clamp(28px, 7vw, 50px);
     }
   }
 
   .instilogo {
-    height: 42px;
+    height: clamp(20px, 5.5vw, 42px);
     width: auto;
     max-width: 100%;
     filter: grayscale(0.15);
@@ -225,41 +235,46 @@ html.typewriter-skip .typewriter-suffix {
     opacity: 1;
   }
 
-  // Phones: shrink everything so all 6 logos still fit on one row.
-  @media (max-width: 576px) {
-    gap: 0.3rem;
-    padding: 0.9rem 0;
-    margin: 1rem 0 0.25rem;
-    .instilogo  { height: 28px; }
-    .institution { font-size: 0.6rem; }
-    .years       { font-size: 0.55rem; }
-  }
-
   // In dark mode many of these logos are dark-on-transparent (IISc, IIITV,
   // IITKGP seals; RAI text). Pad them with a soft white card so they stay
   // legible against the dark background.
   html[data-theme='dark'] & .instilogo {
     background: #ffffff;
-    padding: 5px 8px;
-    border-radius: 6px;
+    padding: 4px 6px;
+    border-radius: 5px;
     box-sizing: content-box;
   }
 
   .institution {
-    margin-top: 0.5rem;
-    font-size: 0.76rem;
+    margin-top: clamp(0.3rem, 1vw, 0.5rem);
+    // Fixed two-line slot: short names ("NVIDIA") and longer ones
+    // ("RBCCPS · IISc") all consume the same vertical band, so the
+    // .years row below stays perfectly aligned across all 6 cells.
+    min-height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(0.55rem, 1.6vw, 0.76rem);
     font-weight: 500;
     color: var(--global-text-color);
-    line-height: 1.3;
+    line-height: 1.25;
     letter-spacing: 0.01em;
+    text-wrap: balance;
   }
 
   .years {
     margin-top: 0.1rem;
-    font-size: 0.7rem;
+    font-size: clamp(0.5rem, 1.4vw, 0.7rem);
     color: var(--global-text-color-light);
     line-height: 1.3;
     letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  // Phones: just tighten the chrome; sizes scale via clamp() above.
+  @media (max-width: 576px) {
+    padding: 0.9rem 0;
+    margin: 1rem 0 0.25rem;
   }
 }
 
