@@ -8,8 +8,8 @@ let toggleTheme = (theme) => {
   }
 };
 
-let setTheme = (theme) => {
-  transTheme();
+let setTheme = (theme, animate = true) => {
+  if (animate) transTheme();
   setHighlight(theme);
   setGiscusTheme(theme);
 
@@ -98,7 +98,7 @@ let initTheme = (theme) => {
     }
   }
 
-  setTheme(theme);
+  setTheme(theme, false);
 };
 
 initTheme(localStorage.getItem("theme"));
