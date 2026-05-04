@@ -161,16 +161,6 @@ html.typewriter-skip .typewriter-suffix {
     transition: transform 0.25s ease, background 0.25s ease;
   }
 
-  // NVIDIA logo source is transparent PNG (green eye only). Pad it
-  // on a pure-white card in both light and dark mode so it never
-  // floats against the surrounding background.
-  .instilogo[alt="NVIDIA"] {
-    background: #ffffff;
-    padding: 5px 8px;
-    border-radius: 6px;
-    box-sizing: content-box;
-  }
-
   .affiliation:hover .instilogo {
     transform: translateY(-2px);
   }
