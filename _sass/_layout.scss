@@ -140,7 +140,7 @@ body.sticky-bottom-footer {
     margin-bottom: 1.25rem;
   }
 
-  // h3 — small uppercase eyebrow
+  // h3 — small uppercase eyebrow (default for subsections)
   h3 {
     margin: 2rem 0 0.6rem;
     font-size: 0.78rem;
@@ -148,6 +148,35 @@ body.sticky-bottom-footer {
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--global-text-color-light);
+  }
+
+  // h3.year-heading — large light-weight numerals for year sections
+  h3.year-heading {
+    margin: 2.5rem 0 0.9rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: -0.005em;
+    text-transform: none;
+    color: var(--global-text-color);
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 28px;
+      height: 1px;
+      background: var(--global-theme-color);
+    }
+  }
+
+  // Tight up the first year heading after the lead paragraph
+  > article > p:first-of-type + h3.year-heading,
+  h2 + p + h3.year-heading {
+    margin-top: 1.25rem;
   }
 
   // Generic lists — breathing room + muted marker
