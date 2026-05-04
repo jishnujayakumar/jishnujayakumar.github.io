@@ -20,5 +20,50 @@ I work on making robots learn from minimal supervision &mdash; few-shot examples
 
 Before UTD I was a research intern at [NVIDIA](https://www.nvidia.com/en-in){:target="_blank"} (Bengaluru) and at [IIT Kharagpur](http://cse.iitkgp.ac.in/){:target="_blank"} ([CNeRG](https://cnerg-iitkgp.github.io/){:target="_blank"}) with [Saptarshi Ghosh](https://sites.google.com/site/saptarshighosh/){:target="_blank"}, and spent two years at [IISc](https://www.iisc.ac.in/){:target="_blank"} / [RBCCPS](https://cps.iisc.ac.in/){:target="_blank"}. I got my B.Tech. from IIIT Vadodara in 2017.
 
+<div class="affiliations">
+  <div class="affiliation">
+    <a href="https://iiitvadodara.ac.in/" target="_blank" rel="noopener">
+      <img class="instilogo" src="{{ '/assets/img/affiliations/iiitv.png' | relative_url }}" alt="IIIT Vadodara">
+    </a>
+    <div class="institution">IIIT Vadodara</div>
+    <div class="years">2013 &mdash; 2017</div>
+  </div>
+  <div class="affiliation">
+    <a href="https://cps.iisc.ac.in/" target="_blank" rel="noopener">
+      <img class="instilogo" src="{{ '/assets/img/affiliations/iisc.png' | relative_url }}" alt="IISc / RBCCPS">
+    </a>
+    <div class="institution">IISc &middot; RBCCPS</div>
+    <div class="years">2018 &mdash; 2020</div>
+  </div>
+  <div class="affiliation">
+    <a href="https://www.nvidia.com/" target="_blank" rel="noopener">
+      <img class="instilogo" src="{{ '/assets/img/affiliations/nvidia.png' | relative_url }}" alt="NVIDIA">
+    </a>
+    <div class="institution">NVIDIA</div>
+    <div class="years">2020 &mdash; 2021</div>
+  </div>
+  <div class="affiliation">
+    <a href="https://www.iitkgp.ac.in/" target="_blank" rel="noopener">
+      <img class="instilogo" src="{{ '/assets/img/affiliations/iitkgp.png' | relative_url }}" alt="IIT Kharagpur">
+    </a>
+    <div class="institution">IIT Kharagpur</div>
+    <div class="years">2021</div>
+  </div>
+  <div class="affiliation">
+    <a href="https://www.utdallas.edu/" target="_blank" rel="noopener">
+      <img class="instilogo" src="{{ '/assets/img/affiliations/utd.png' | relative_url }}" alt="UT Dallas">
+    </a>
+    <div class="institution">UT Dallas</div>
+    <div class="years">2021 &mdash; Present</div>
+  </div>
+  <div class="affiliation">
+    <a href="https://rai-inst.com/" target="_blank" rel="noopener">
+      <img class="instilogo" src="{{ '/assets/img/affiliations/rai.svg' | relative_url }}" alt="RAI Institute">
+    </a>
+    <div class="institution">RAI Institute</div>
+    <div class="years">2025</div>
+  </div>
+</div>
+
 <!-- Mentoring note hidden for now -->
 <!-- <strong style="color:#f30000">I am always open to mentoring motivated MS and undergraduate students interested in robot/deep learning research. If you have strong programming skills and enthusiasm for research, feel free to reach out via email.</strong><br> -->
