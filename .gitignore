@@ -11,3 +11,6 @@ _site
 Gemfile.lock
 vendor
 .claude/
+
+# Private internship-prep notes — DO NOT publish.
+internship-2026/
