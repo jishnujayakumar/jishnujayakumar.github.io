@@ -18,8 +18,6 @@ I&rsquo;m a fourth-year PhD student at [UT Dallas](https://www.utdallas.edu){:ta
 
 I work on making robots learn from minimal supervision &mdash; few-shot examples (a few photos of an object) and from humans (one demonstration video, a few iterations of guidance/correction) &mdash; and I try to run them on real hardware, not just in simulation. My PhD thesis pulls four projects together: [FewSOL](https://irvlutd.github.io/FewSOL/){:target="_blank"} (ICRA 2023), [Proto-CLIP](https://irvlutd.github.io/Proto-CLIP/){:target="_blank"} (IROS 2024), [iTeach](https://irvlutd.github.io/iTeach/){:target="_blank"}, and [HRT1](https://irvlutd.github.io/HRT1/){:target="_blank"}.
 
-Before UTD I was a research intern at [NVIDIA](https://www.nvidia.com/en-in){:target="_blank"} (Bengaluru) and at [IIT Kharagpur](http://cse.iitkgp.ac.in/){:target="_blank"} ([CNeRG](https://cnerg-iitkgp.github.io/){:target="_blank"}) with [Saptarshi Ghosh](https://sites.google.com/site/saptarshighosh/){:target="_blank"}, and spent two years at [IISc](https://www.iisc.ac.in/){:target="_blank"} / [RBCCPS](https://cps.iisc.ac.in/){:target="_blank"}. I got my B.Tech. from IIIT Vadodara in 2017.
-
 <div class="affiliations">
   <div class="affiliation">
     <a href="https://iiitvadodara.ac.in/" target="_blank" rel="noopener">
