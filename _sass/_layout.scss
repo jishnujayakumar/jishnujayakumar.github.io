@@ -111,13 +111,21 @@ body.sticky-bottom-footer {
   to { border-right-color: transparent; }
 }
 
-// Don't animate on print or when user prefers reduced motion
+// Don't animate on print, when user prefers reduced motion,
+// or after the user has already seen the animation in this tab session
+// (set by an inline script in <head> that flips html.typewriter-skip).
 @media print, (prefers-reduced-motion: reduce) {
   .typewriter-suffix {
     width: auto !important;
     border-right: none !important;
     animation: none !important;
   }
+}
+
+html.typewriter-skip .typewriter-suffix {
+  width: auto !important;
+  border-right: none !important;
+  animation: none !important;
 }
 
 

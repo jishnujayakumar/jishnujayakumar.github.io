@@ -30,6 +30,20 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
+    <!-- Typewriter: play once per session. Inline so it runs before paint
+         (no flicker between the "width: 0" initial state and the played-class override). -->
+    <script>
+      (function() {
+        try {
+          if (sessionStorage.getItem('name_typewriter_played') === '1') {
+            document.documentElement.classList.add('typewriter-skip');
+          } else {
+            sessionStorage.setItem('name_typewriter_played', '1');
+          }
+        } catch (e) { /* sessionStorage unavailable; fall through and animate */ }
+      })();
+    </script>
+
     <!-- Dark Mode -->
     {% if site.enable_darkmode %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/{{ site.highlight_theme_dark | append: '.css' }}" media="none" id="highlight_theme_dark" />
