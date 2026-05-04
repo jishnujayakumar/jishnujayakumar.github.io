@@ -151,7 +151,7 @@ body.sticky-bottom-footer {
   }
 
   // Generic lists — breathing room + muted marker
-  ul:not(.talks) {
+  ul {
     margin: 0.5rem 0 1.5rem;
     padding-left: 1.5rem;
 
@@ -231,55 +231,6 @@ body.sticky-bottom-footer {
     }
   }
 
-  // Talks: title-forward rows with hairline dividers
-  ul.talks {
-    list-style: none;
-    margin: 0.5rem 0 2rem;
-    padding-left: 0;
-  }
-
-  .talk {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 0.55rem 0;
-    line-height: 1.55;
-    border-bottom: 1px solid var(--global-divider-color);
-
-    &:last-child { border-bottom: none; }
-
-    @media (max-width: 576px) {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.2rem;
-    }
-  }
-
-  .talk-title {
-    flex: 1 1 auto;
-    color: var(--global-text-color);
-    transition: color 0.2s ease;
-
-    .award {
-      display: inline-block;
-      margin-right: 0.15rem;
-    }
-
-    &:hover { color: var(--global-theme-color); }
-  }
-
-  .talk-meta {
-    flex: 0 0 auto;
-    color: var(--global-text-color-light);
-    font-size: 0.85rem;
-    white-space: nowrap;
-
-    a {
-      color: inherit;
-      &:hover { color: var(--global-theme-color); }
-    }
-  }
 }
 
 // TODO: redefine content layout.
