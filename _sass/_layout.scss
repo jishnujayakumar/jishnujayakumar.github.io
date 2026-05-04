@@ -229,10 +229,10 @@ body.sticky-bottom-footer {
       width: 100%;
       height: auto;
       aspect-ratio: 16 / 9;
-      object-fit: cover;
+      object-fit: contain;  // show full frame; letterbox/pillarbox if aspect differs
       border-radius: 6px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-      background-color: var(--global-divider-color);  // soft fill if cover leaves any gap
+      background-color: var(--global-divider-color);  // letterbox fill
     }
 
     &:hover {
