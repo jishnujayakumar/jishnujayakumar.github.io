@@ -184,38 +184,6 @@ html.typewriter-skip .typewriter-suffix {
   }
 }
 
-// Subtitle on the about page: "Research: <link>" rendered as a refined
-// inline tagline. Label sits in muted text, the link wears a thin
-// theme-color accent underline that thickens on hover.
-.post-header .desc {
-  margin-top: 0.4rem;
-  font-size: 0.95rem;
-  color: var(--global-text-color-light);
-  letter-spacing: 0.005em;
-
-  strong {
-    margin-right: 0.35rem;
-    font-weight: 600;
-    color: var(--global-text-color);
-  }
-
-  a {
-    color: var(--global-text-color);
-    text-decoration: none;
-    background-image: linear-gradient(var(--global-theme-color), var(--global-theme-color));
-    background-repeat: no-repeat;
-    background-position: 0 100%;
-    background-size: 100% 1px;
-    padding-bottom: 1px;
-    transition: background-size 0.25s ease, color 0.25s ease;
-
-    &:hover, &:focus {
-      color: var(--global-theme-color);
-      background-size: 100% 2px;
-    }
-  }
-}
-
 .affiliations {
   display: flex;
   flex-wrap: nowrap;
