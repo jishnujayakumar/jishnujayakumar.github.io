@@ -109,11 +109,21 @@ body.sticky-bottom-footer {
     height: 50px;
     width: auto;
     max-width: 100%;
-    transition: transform 0.25s ease;
+    transition: transform 0.25s ease, background 0.25s ease;
   }
 
   .affiliation:hover .instilogo {
     transform: translateY(-2px);
+  }
+
+  // In dark mode many of these logos are dark-on-transparent (IISc, IIITV,
+  // IITKGP seals; RAI text). Pad them with a soft white card so they stay
+  // legible against the dark background.
+  html[data-theme='dark'] & .instilogo {
+    background: #ffffff;
+    padding: 5px 8px;
+    border-radius: 6px;
+    box-sizing: content-box;
   }
 
   .institution {
