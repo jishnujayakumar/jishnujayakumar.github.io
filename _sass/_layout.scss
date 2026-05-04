@@ -57,7 +57,7 @@ body.sticky-bottom-footer {
       align-items: center;
       gap: 0.5rem;
       padding: 0.15rem 0.25rem;
-      font-size: 1.85rem;
+      font-size: 1.6rem;
       line-height: 1;
 
       // Profile column is narrow on phones; tighten gap + shrink slightly
@@ -65,7 +65,7 @@ body.sticky-bottom-footer {
       // still fit on one row at a 320 px viewport.
       @media (max-width: 576px) {
         gap: 0.4rem;
-        font-size: 1.65rem;
+        font-size: 1.45rem;
       }
 
       a {
