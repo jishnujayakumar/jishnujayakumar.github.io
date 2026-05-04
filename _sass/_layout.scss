@@ -34,44 +34,48 @@ body.sticky-bottom-footer {
 
   .profile-social {
     margin-top: 1.1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     padding-top: 0.9rem;
-    padding-bottom: 0.9rem;
     border-top: 1px solid var(--global-divider-color);
-    text-align: center;
 
+    // Vertical labeled link list (Sebastin minimal-research-theme style).
+    // Each <a> has a title attribute; we surface that as the visible label
+    // via ::after content: attr(title). Lowercased for the design tone.
     .contact-icons {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 0.65rem 0.7rem;
-      padding: 0.15rem 0.25rem;
-      font-size: 1.2rem;
-      line-height: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.15rem;
+      padding: 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
 
       a {
-        display: inline-flex;
+        display: flex;
         align-items: center;
+        gap: 0.55rem;
+        padding: 0.18rem 0.4rem;
         margin: 0;
         color: var(--global-text-color);
-        transition: transform 0.25s ease, color 0.25s ease;
+        border-radius: 4px;
+        transition: background 0.2s ease, color 0.2s ease;
+
+        i {
+          width: 1.15rem;
+          text-align: center;
+          font-size: 1rem;
+        }
+
+        &::after {
+          content: attr(title);
+          text-transform: lowercase;
+          font-size: 0.88rem;
+        }
 
         &:hover {
-          transform: scale(1.2) translateY(-2px);
+          background: rgba(127, 127, 127, 0.08);
           color: var(--global-theme-color);
         }
-      }
-
-      a.cv-link {
-        font-size: 0.72rem;
-        font-weight: 600;
-        letter-spacing: 0.04em;
-        padding: 0.1rem 0.35rem;
-        border: 1.5px solid currentColor;
-        border-radius: 4px;
-        text-decoration: none;
-        line-height: 1.1;
       }
     }
   }
