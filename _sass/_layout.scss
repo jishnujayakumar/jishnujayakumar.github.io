@@ -216,19 +216,27 @@ body.sticky-bottom-footer {
     padding: 0.25rem 0;
     transition: transform 0.2s ease;
 
-    // Preview thumbnail: rounded, soft shadow, gentle hover
-    .preview, img.preview, figure picture {
+    // Preview thumbnail: rounded, soft shadow, gentle hover.
+    // Force a uniform 16:9 box so videos/images with different
+    // aspect ratios render at the same dimensions; object-fit:cover
+    // crops without distortion.
+    .preview, img.preview, video.preview, figure picture {
       border-radius: 6px;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    img.preview, .preview img {
+    img.preview, .preview img, video.preview {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
       border-radius: 6px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+      background-color: var(--global-divider-color);  // soft fill if cover leaves any gap
     }
 
     &:hover {
-      img.preview, .preview img {
+      img.preview, .preview img, video.preview {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         transform: translateY(-1px);
       }
