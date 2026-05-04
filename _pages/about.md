@@ -30,7 +30,7 @@ I work on making robots learn from minimal supervision &mdash; few-shot examples
     <a href="https://cps.iisc.ac.in/" target="_blank" rel="noopener">
       <img class="instilogo" src="{{ '/assets/img/affiliations/iisc.png' | relative_url }}" alt="IISc / RBCCPS">
     </a>
-    <div class="institution">IISc &middot; RBCCPS</div>
+    <div class="institution">RBCCPS &middot; IISc</div>
     <div class="years">2018 &mdash; 2020</div>
   </div>
   <div class="affiliation">
