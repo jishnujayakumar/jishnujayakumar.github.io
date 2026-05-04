@@ -148,6 +148,10 @@ html.typewriter-skip .typewriter-suffix {
   justify-content: space-between;
   align-items: flex-end;
   gap: 0.5rem;
+  // Drop below the floated .profile so the row uses the FULL article width,
+  // not just the leftover ~65% beside the float.
+  clear: both;
+  width: 100%;
   margin: 2.25rem 0 1rem;
   padding: 1.5rem 0;
   border-top: 1px solid var(--global-divider-color);
