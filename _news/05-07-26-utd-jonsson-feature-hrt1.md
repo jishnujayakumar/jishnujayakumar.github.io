@@ -14,5 +14,6 @@ Spotted in [UTD Jonsson](https://engineering.utdallas.edu/){:target="_blank"}'s 
     <span style="opacity: 0.5;">·</span>
     <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7458214107872268288/" target="_blank" rel="noopener" title="LinkedIn post" style="color: inherit; text-decoration: none;"><i class="fab fa-linkedin" style="font-size: 0.95rem;"></i></a>
     <a href="https://x.com/UTDJonsson/status/2052448474130424280" target="_blank" rel="noopener" title="X post" style="color: inherit; text-decoration: none;"><i class="fa-brands fa-x-twitter" style="font-size: 0.95rem;"></i></a>
+    <a href="https://www.facebook.com/share/p/1EPPzsGMui/" target="_blank" rel="noopener" title="Facebook post" style="color: inherit; text-decoration: none;"><i class="fab fa-facebook" style="font-size: 0.95rem;"></i></a>
   </figcaption>
 </figure>
