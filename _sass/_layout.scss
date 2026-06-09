@@ -138,6 +138,18 @@ html.typewriter-skip .typewriter-suffix {
   animation: none !important;
 }
 
+// About-page subtitle research line. Deliberately NOT animated: it's the
+// primary piece of information (what the research is), so it's rendered
+// statically and stays instantly legible. It's a link, so it keeps the theme
+// color + persistent underline — the global underline is hover-only, and the
+// `span` typography rule would otherwise repaint it as plain body text, hiding
+// that it's a link.
+.research-phrase {
+  color: var(--global-theme-color);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 
 
 // Affiliations strip on the about page — institutional logos
@@ -181,6 +193,28 @@ html.typewriter-skip .typewriter-suffix {
     line-height: 1.6;
 
     &:last-child { margin-bottom: 0; }
+  }
+}
+
+// Mentoring call-to-action on the about page. A left accent + faint tint
+// derived from the site theme color (purple in light, cyan in dark) marks
+// it as a callout without introducing a one-off hardcoded hue, so it tracks
+// the theme automatically. The "Looking for students:" lead-in carries the
+// bold theme color as the visual hook.
+.mentoring-callout {
+  margin: 1.25rem 0 0;
+  padding: 0.85rem 1.1rem;
+  line-height: 1.55;
+  border-left: 3px solid var(--global-theme-color);
+  border-radius: 0 6px 6px 0;
+  background: var(--global-code-bg-color);
+  background: color-mix(in srgb, var(--global-theme-color) 8%, var(--global-bg-color));
+
+  p { margin: 0; }
+
+  strong {
+    color: var(--global-theme-color);
+    font-weight: 700;
   }
 }
 
