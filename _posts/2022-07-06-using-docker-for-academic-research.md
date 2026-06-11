@@ -7,11 +7,12 @@ jumbotron: ../../../assets/blog/docker-for-research.svg
 jumbotron_alt: Docker for academic research
 tags: Docker research
 categories: research
+thumbnail: /assets/blog/docker-for-research.svg
 ---
 <img src="../../../assets/blog/docker-for-research.svg" alt="Docker for academic research" width="100%" height="150px" >
 <center>Image made using logos available <a href='https://www.docker.com/company/newsroom/media-resources/' target="_blank">here</a>.</center><br>
 <hr>
-* **Note**: Reading this post needs familiarity with [Docker](https://www.docker.com/){:target="_blank"}. If you are new to the Docker world, I suggest looking [here](https://www.youtube.com/watch?v=iqqDU2crIEQ){:target="_blank"}. This post is more catered towards the steps required for creating and pushing images to [DockerHub].*
+> **Note**: Reading this post needs familiarity with [Docker](https://www.docker.com/){:target="_blank"}. If you are new to the Docker world, I suggest looking [here](https://www.youtube.com/watch?v=iqqDU2crIEQ){:target="_blank"}. This post is more catered towards the steps required for creating and pushing images to [DockerHub].
 
 
 <!-- <hr> -->
@@ -19,9 +20,11 @@ categories: research
 Docker is a well-known tool. Although it is used prominently in the industry, there is a usage gap when talking about academic research. The main advantage of using Docker is that it allows the creation of images that ease the process of reproducibility. There have been various attempts to encourage reproducibility.
 
 - [NAACL'22 Reproducibility Track](https://naacl2022-reproducibility-track.github.io/tutorial/){:target="_blank"}
-- [RESCIENCE C](http://rescience.githb.io/){:target="_blank"}
+- [RESCIENCE C](https://rescience.github.io/){:target="_blank"}
 
 It is always a good idea to do experiments inside the Docker container so that the image of the container can be shared at the end. This would give the end users the same environment for conducting experiments and reduce a lot of environment setup time.
+
+> **Tip:** The commit-and-push workflow below is the fastest way to snapshot a working research environment. For long-lived projects, also keep a `Dockerfile` alongside — it documents *how* the environment was built, which the research-software community recommends for reproducibility (see [*Ten simple rules for writing Dockerfiles for reproducible data science*, PLOS Computational Biology 2020](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008316){:target="_blank"}).
 
 [DockerHub]: https://hub.docker.com/
 
@@ -53,13 +56,13 @@ docker exec -it <container-name> /bin/bash # for bash shell
 {% highlight bash %}
 docker commit \
 --author <author-email> \
---message <commit-message> \ 
+--message <commit-message> \
 <container-name>
 {% endhighlight %}
 
-**Step.6**: Check for the IMAGE-ID.
+**Step.6**: Check for the IMAGE-ID of the newly committed image.
 {% highlight bash %}
-docker ps # get IMAGE-ID
+docker images # get IMAGE-ID
 {% endhighlight %}
 
 **Step.7**: Tag the IMAGE-ID with the local-name.
@@ -89,8 +92,8 @@ docker push <username>/<repo>
 <br><br>
 Feel free to reach out in case you have a query. You are always welcome. <br>
 Please post it as a tweet to
-[@jis_padalunkal](https://twitter.com/jis_padalunkal){:target="_blank"}, and I will definitely try to answer it.
+[@jishnu_jaykumar](https://x.com/jishnu_jaykumar){:target="_blank"}, and I will definitely try to answer it.
 
 {% highlight python %}
-@jis_padalunkal #askjishnu <your question>
+@jishnu_jaykumar #askjishnu <your question>
 {% endhighlight %}

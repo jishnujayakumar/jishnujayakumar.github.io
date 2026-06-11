@@ -1,6 +1,7 @@
 ---
 layout: default
-title: blog
+title: Blog
+seo_description: Blog by Jishnu Jaykumar Padalunkal — notes on robotics research, engineering fixes, and PhD life at UT Dallas. Docker for research, robot networking, Linux tooling, and more.
 pagination:
   enabled: true
   collection: posts
@@ -154,7 +155,7 @@ pagination:
 {%- if post.thumbnail -%}
     </div>
   <div class="col-sm-3">
-    <img class="card-img" src="{{post.thumbnail | relative_url}}" style="object-fit: cover; height: 90%" alt="image">
+    <img class="card-img post-thumbnail" src="{{post.thumbnail | relative_url}}" alt="{{ post.title }}">
   </div>
 </div>
 {%- endif -%}

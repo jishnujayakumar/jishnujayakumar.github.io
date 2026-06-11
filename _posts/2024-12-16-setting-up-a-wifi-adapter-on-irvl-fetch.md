@@ -5,12 +5,15 @@ date: 16 Dec 2024
 description: Robots operating in environments without reliable network connectivity often require a self-hosted Wi-Fi hotspot for seamless operation. This blog post will guide you through creating a Wi-Fi hotspot on boot using a Linux-based system, ensuring uninterrupted communication with your robot.
 tags: robot wifi hotspot network system setup
 categories: research robotics phd-life sys_setup
+thumbnail: /assets/blog/irvl-fetch-wifi-adapter-diy/alpha_adapter/thumbnail.jpg
 ---
 
 <img src="{{ site.baseurl }}/assets/blog/irvl-fetch-wifi-adapter-diy/alpha_adapter/robot-human-hololens.png" alt="robot-human-hololens" width="100%">
 <center>At the <a href="https://labs.utdallas.edu/irvl/" target="_blank">Intelligent Robotics and Vision Lab</a>, I am trying to establish a connection between the <span style="font-weight: bold">HoloLens 2</span> device mounted on my head and the <span style="font-weight: bold">Fetch</span> robot.</center><br>
 
 <hr>
+
+> **TL;DR:** Three small pieces give your robot a self-hosted Wi-Fi network that survives reboots: a script that brings up an `nmcli` hotspot, a `chmod 600` credentials file it reads, and a `systemd` oneshot service that runs it at boot. Recipe below, tested on our Fetch robot (Ubuntu 18.04).
 
 ## Index
 - [Index](#index)
@@ -37,7 +40,7 @@ Let’s configure a Wi-Fi hotspot to start automatically whenever your robot boo
 
 ### Prerequisites  
 - A Linux-based system (tested on Ubuntu). Our Fetch robot has Ubuntu 18.04 installed.
-- NetworkManager installed (commonly pre-installed on Ubuntu).  
+- NetworkManager installed (pre-installed on Ubuntu desktop editions).  
 - A compatible Wi-Fi adapter connected to the robot.  
 - Root access to the system.
 
@@ -49,7 +52,7 @@ Your browser does not support the video tag.
 </video>
 
 
-<center><a href="https://www.amazon.com/Network-AWUS036ACM-Long-Range-Wide-Coverage-High-Sensitivity/dp/B08BJS8FXD/ref=asc_df_B08BJS8FXD?mcid=bda890b6f4353c769755c6838472b8c9&tag=hyprod-20&linkCode=df0&hvadid=693415510935&hvpos=&hvnetw=g&hvrand=11530231208179162355&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9026839&hvtargid=pla-996386731604&psc=1" target="_blank">Alpha Dual Antenna Wifi Adapter</a> connected on top of the head of our Fetch robot.</center><br>
+<center><a href="https://www.amazon.com/dp/B08BJS8FXD" target="_blank">Alfa AWUS036ACM dual-antenna Wi-Fi adapter</a> connected on top of the head of our Fetch robot.</center><br>
 
 
 ---
@@ -76,7 +79,9 @@ echo "Firewall stopped and disabled on system startup"
 sleep 2
 
 # Read credentials and create hotspot
-CREDS_FILE=$WIFI_ADAP_ROOT_DIR/hotspot_creds.cfg
+# Use the absolute path here: systemd runs this script with a clean
+# environment, so $WIFI_ADAP_ROOT_DIR will NOT be set at boot.
+CREDS_FILE=/home/fetch/wifi-adapter-settings/hotspot_creds.cfg
 source $CREDS_FILE
 
 # Create the hotspot
@@ -84,9 +89,9 @@ nmcli device wifi hotspot ifname alpha_wifi_adap ssid "$SSID" password "$PASSWOR
 ```
 
 Explanation of the Script:  
-- **Disable the firewall:** Ensures no network traffic is blocked (adjust this for secure setups).  
+- **Disable the firewall:** Ensures no network traffic is blocked (this is fine on an isolated lab robot — adjust for secure setups).  
 - **Wait for 2 seconds:** Adds a buffer to ensure system services are up.  
-- **Source credentials:** Reads the hotspot name (SSID) and password from hotspot_creds.cfg.  
+- **Source credentials:** Reads the hotspot name (SSID) and password from hotspot_creds.cfg. Use the **absolute path** — when systemd runs this script at boot, shell environment variables like `$WIFI_ADAP_ROOT_DIR` are not set.  
 - **Set up the hotspot:** Uses nmcli to configure and start the hotspot.  
 
 Save this script to `$WIFI_ADAP_ROOT_DIR/start_hotspot.sh` and make it executable:  
@@ -228,8 +233,8 @@ fi
 
 ---
 
-Feel free to reach out in case you have a query. You are always welcome. You can find me on X at [@jis_padalunkal](https://x.com/jis_padalunkal){:target="_blank"}.
+Feel free to reach out in case you have a query. You are always welcome. You can find me on X at [@jishnu_jaykumar](https://x.com/jishnu_jaykumar){:target="_blank"}.
 
 <script>
-  document.getElementByClass('demo-video').playbackRate = 1.5;
+  document.querySelectorAll('.demo-video').forEach(function (v) { v.playbackRate = 1.5; });
 </script>
