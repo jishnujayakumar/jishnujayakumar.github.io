@@ -1,8 +1,8 @@
 ---
 layout: misc
-title: Misc
-permalink: /misc
-seo_description: Professional service (peer reviewer for ICRA, IROS, CoRL, RA-L; organizer of NeuRL Robot Manipulation Workshop @ CoRL 2023), teaching (9 semesters, 11 courses at UT Dallas), and literature talks by Jishnu Jaykumar Padalunkal.
+title: Activities
+permalink: /activities
+seo_description: Activities of Jishnu Jaykumar Padalunkal — professional service (peer reviewer for ICRA, IROS, CoRL, RA-L; organizer of NeuRL Robot Manipulation Workshop @ CoRL 2023), teaching (10 semesters, 11 course offerings at UT Dallas), literature talks, and blog.
 nav: true
 nav_order: 2
 ---

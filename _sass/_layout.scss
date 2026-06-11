@@ -178,6 +178,7 @@ html.typewriter-skip .typewriter-suffix {
     .bio { grid-column: 1; grid-row: 1; }
 
     .affiliations,
+    .mentoring-callout,
     > h2,
     > .news {
       grid-column: 1 / -1;
@@ -202,6 +203,11 @@ html.typewriter-skip .typewriter-suffix {
 // the theme automatically. The "Looking for students:" lead-in carries the
 // bold theme color as the visual hook.
 .mentoring-callout {
+  // Direct child of the about-page article grid (not nested in .bio), so the
+  // grid-column: 1 / -1 rule above can stretch it under both the bio and the
+  // profile image. clear:both covers the float fallback on narrow screens.
+  clear: both;
+  width: 100%;
   margin: 1.25rem 0 0;
   padding: 0.85rem 1.1rem;
   line-height: 1.55;
@@ -216,6 +222,17 @@ html.typewriter-skip .typewriter-suffix {
     color: var(--global-theme-color);
     font-weight: 700;
   }
+}
+
+// Blog index thumbnails: fill the side column at a fixed aspect ratio and
+// crop (object-fit: cover) — the image scales with the column width and is
+// never stretched out of proportion.
+.post-list .post-thumbnail {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .affiliations {
@@ -331,26 +348,38 @@ html.typewriter-skip .typewriter-suffix {
  ******************************************************************************/
 
 .misc-page {
-  // Table of contents — subtle nav strip
+  // Table of contents — prominent pill buttons so section nav is
+  // unmissable and obviously clickable (was a subtle text strip).
   .misc-toc {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
     margin: 0 0 2.5rem;
-    padding: 0.7rem 1.1rem;
-    background: rgba(127, 127, 127, 0.07);
-    border-radius: 6px;
-    color: var(--global-text-color-light);
-    font-size: 0.88rem;
-    line-height: 1.7;
 
     strong {
       color: var(--global-text-color);
-      margin-right: 0.4rem;
       font-weight: 600;
+      font-size: 1rem;
+      margin-right: 0.2rem;
     }
 
     a {
-      color: var(--global-text-color);
-      transition: color 0.2s ease;
-      &:hover { color: var(--global-theme-color); }
+      display: inline-block;
+      padding: 0.45rem 1.1rem;
+      border: 1.5px solid var(--global-theme-color);
+      border-radius: 999px;
+      color: var(--global-theme-color);
+      background: color-mix(in srgb, var(--global-theme-color) 8%, var(--global-bg-color));
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: background 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        background: var(--global-theme-color);
+        color: var(--global-bg-color);
+        text-decoration: none;
+      }
     }
   }
 

@@ -7,9 +7,10 @@ layout: default
 
     <nav class="misc-toc" aria-label="Table of contents">
       <strong>Jump to:</strong>
-      <a href="#service">Service</a> &middot;
-      <a href="#teaching">Teaching</a> &middot;
+      <a href="#service">Service</a>
+      <a href="#teaching">Teaching</a>
       <a href="#talks">Talks</a>
+      <a href="#blog">Blog</a>
     </nav>
 
     <h2 id="service">Service</h2>
@@ -36,7 +37,7 @@ layout: default
     </ul>
 
     <h2 id="teaching">Teaching</h2>
-    <p>Graduate Teaching Assistant at <a href="https://www.utdallas.edu" target="_blank" rel="noopener">UT Dallas</a> across <strong>9 semesters</strong> and <strong>11 courses</strong> (2022&ndash;2026).</p>
+    <p>Graduate Teaching Assistant at <a href="https://www.utdallas.edu" target="_blank" rel="noopener">UT Dallas</a> across <strong>10 semesters</strong> and <strong>11 course offerings</strong> (2022&ndash;2026).</p>
 
     <h3 class="level-eyebrow">Graduate</h3>
     <dl class="course-catalog">
@@ -158,6 +159,14 @@ layout: default
     <ul class="talk-list">
       <li><a href="{{ site.baseurl }}/assets/pdf/presentations/utd/courses/GPT-1.pdf" target="_blank" rel="noopener">GPT: Improving Language Understanding by Generative Pre-Training</a> <span class="talk-when"><a href="https://xinyadu.github.io/cs6301/index.html" target="_blank" rel="noopener">DL for NLP</a></span></li>
       <li><a href="{{ site.baseurl }}/assets/pdf/presentations/utd/courses/CS6319-Superpixels.pdf" target="_blank" rel="noopener">[Re:] Image partitioning into convex polygons</a> <span class="talk-when">Computational Geometry</span></li>
+    </ul>
+
+    <h2 id="blog">Blog</h2>
+    <p>Notes from the trenches — engineering fixes, case studies, and PhD life. <a href="{{ '/blog/' | relative_url }}">All posts &rarr;</a></p>
+    <ul class="talk-list">
+      {% for post in site.posts limit: 5 %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> <span class="talk-when">{{ post.date | date: "%b %Y" }}</span></li>
+      {% endfor %}
     </ul>
 
   </article>
