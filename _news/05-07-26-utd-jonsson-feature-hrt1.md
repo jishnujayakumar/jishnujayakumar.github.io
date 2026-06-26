@@ -5,7 +5,7 @@ inline: true
 ---
 
 
-Spotted in [UTD Jonsson](https://engineering.utdallas.edu/){:target="_blank"}'s [ECS AI Days 2026](https://jonssonadr.utdallas.edu/events/ecs-ai-days/){:target="_blank"} recap — where we demoed [HRT1](https://irvlutd.github.io/HRT1/){:target="_blank"} 🎉
+Spotted in [UTD Jonsson](https://engineering.utdallas.edu/){:target="_blank"}'s [ECS AI Days 2026](https://jonssonadr.utdallas.edu/events/ecs-ai-days/){:target="_blank"} [recap](https://engineering.utdallas.edu/news/archive/jonsson-school-ai-days/){:target="_blank"} — where we demoed [HRT1](https://irvlutd.github.io/HRT1/){:target="_blank"} 🎉
 
 <figure style="margin: 0.75rem 0 0; max-width: 240px;">
   <img src="{{ '/assets/img/news/ecs-social-media-hrt1.jpeg' | relative_url }}" alt="UT Dallas Jonsson School ECS AI Days 2026 event recap — at the HRT1 demo (Fetch robot setup, IRVL)" style="display: block; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.10), 0 2px 4px rgba(0,0,0,0.06);">
