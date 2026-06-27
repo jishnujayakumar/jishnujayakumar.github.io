@@ -12,8 +12,6 @@ Spotted in [UTD Jonsson](https://engineering.utdallas.edu/){:target="_blank"}'s 
   <figcaption style="margin-top: 0.5rem; font-size: 0.78rem; opacity: 0.65; font-style: italic; line-height: 1.4; display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
     <span>via @UTDJonsson</span>
     <span style="opacity: 0.5;">·</span>
-    <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7458214107872268288/" target="_blank" rel="noopener" title="LinkedIn post" style="color: inherit; text-decoration: none;"><i class="fab fa-linkedin" style="font-size: 0.95rem;"></i></a>
-    <a href="https://x.com/UTDJonsson/status/2052448474130424280" target="_blank" rel="noopener" title="X post" style="color: inherit; text-decoration: none;"><i class="fa-brands fa-x-twitter" style="font-size: 0.95rem;"></i></a>
     <a href="https://www.facebook.com/share/p/1EPPzsGMui/" target="_blank" rel="noopener" title="Facebook post" style="color: inherit; text-decoration: none;"><i class="fab fa-facebook" style="font-size: 0.95rem;"></i></a>
     <a href="https://www.instagram.com/p/DYDbx9iHHtI/" target="_blank" rel="noopener" title="Instagram post" style="color: inherit; text-decoration: none;"><i class="fab fa-instagram" style="font-size: 0.95rem;"></i></a>
   </figcaption>
