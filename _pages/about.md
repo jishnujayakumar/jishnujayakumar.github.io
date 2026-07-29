@@ -15,16 +15,12 @@ social: true  # includes social icons at the bottom of the page
 
 <div class="bio" markdown="1">
 
-I&rsquo;m a fourth-year PhD student at [UT Dallas](https://www.utdallas.edu){:target="_blank"}, working on robot learning with [Yu Xiang](https://yuxng.github.io/){:target="_blank"} at [IRVL](https://labs.utdallas.edu/irvl/){:target="_blank"}. I started as an MS student in Fall 2021 and switched to the PhD program after my first year.
+I&rsquo;m a final-year PhD student at [UT Dallas](https://www.utdallas.edu){:target="_blank"}, working on robot learning with [Yu Xiang](https://yuxng.github.io/){:target="_blank"} at [IRVL](https://labs.utdallas.edu/irvl/){:target="_blank"}. I started as an MS student in Fall 2021 and switched to the PhD program after my first year.
 
-🎓 ***I&rsquo;m graduating in 2027 and looking for full-time research scientist positions in industry.***
+🎓 ***I&rsquo;m graduating in 2027 and looking for full-time research scientist positions in industry. If my experience brings value to your team, please [reach out](mailto:{{ site.email }})!***
 
-I work on making robots learn from minimal supervision &mdash; either few-shot examples (a few photos of an object) or input from humans (one demonstration video, a few iterations of guidance/correction). The work runs on real hardware, not just in simulation. My PhD thesis brings four such projects together: [FewSOL](https://irvlutd.github.io/FewSOL/){:target="_blank"} (ICRA 2023), a few-shot object dataset; [Proto-CLIP](https://irvlutd.github.io/Proto-CLIP/){:target="_blank"} (IROS 2024), vision-language few-shot perception; [iTeach](https://irvlutd.github.io/iTeach/){:target="_blank"} (under submission), learning from human interaction and guidance; and [HRT1](https://irvlutd.github.io/HRT1/){:target="_blank"} (under submission), mobile manipulation from a single human video.
+I work on making robots learn from minimal supervision &mdash; either few-shot examples (a few photos of an object) or input from humans (one demonstration video, a few iterations of guidance/correction). <strong style="color: var(--global-theme-color); font-style: italic;">The work runs on real hardware, not just in simulation.</strong> My PhD thesis brings four such projects together: [FewSOL](https://irvlutd.github.io/FewSOL/){:target="_blank"} (ICRA 2023), a few-shot object learning dataset; [Proto-CLIP](https://irvlutd.github.io/Proto-CLIP/){:target="_blank"} (IROS 2024), vision-language few-shot perception; [iTeach](https://irvlutd.github.io/iTeach/){:target="_blank"} (under submission), learning from human interaction and guidance; and [HRT1](https://irvlutd.github.io/HRT1/){:target="_blank"} (under submission), training-free mobile manipulation from a single video.
 
-</div>
-
-<div class="mentoring-callout" markdown="1">
-**Looking for students:** I&rsquo;m always looking for motivated MS and undergraduate students to supervise on robot learning research at the intersection of vision, language, and robotics. If you have strong coding skills and are interested in research, please [reach out via email](mailto:{{ site.email }}){:target="_blank"}.
 </div>
 
 <div class="affiliations">
