@@ -11,6 +11,7 @@ layout: default
       <a href="#teaching">Teaching</a>
       <a href="#talks">Talks</a>
       <a href="#blog">Blog</a>
+      {% if site.data.resources %}<a href="#resources">Resources</a>{% endif %}
     </nav>
 
     <h2 id="service">Service</h2>
@@ -170,6 +171,19 @@ layout: default
       <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> <span class="talk-when">{{ post.date | date: "%b %Y" }}</span></li>
       {% endfor %}
     </ul>
+
+    {% if site.data.resources %}
+    <h2 id="resources">Resources</h2>
+    <p>Courses and lectures I keep learning from &mdash; and recommend to anyone getting into robot learning and AI agents.</p>
+    {% for group in site.data.resources %}
+    <h3 class="level-eyebrow">{{ group.group }}</h3>
+    <ul class="talk-list">
+      {% for r in group.items %}
+      <li><a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.title }}</a>{% if r.note %} &mdash; {{ r.note }}{% endif %}</li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+    {% endif %}
 
   </article>
 </div>
