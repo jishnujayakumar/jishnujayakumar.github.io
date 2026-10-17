@@ -154,34 +154,27 @@ html.typewriter-skip .typewriter-suffix {
 
 // Affiliations strip on the about page — institutional logos
 // (Sebastin minimal-research-theme pattern: grayscale logos, name + years)
-// About page: 2-column grid on tablet+. Bio is the primary content, profile
-// is the right rail. align-items: start so neither cell stretches — that
-// way no empty space appears below the bio just because the profile column
-// happens to be taller. Affiliations span full width below.
+// About page on tablet+: the profile floats right and the bio wraps around
+// it, so once the text passes the photo and social icons it widens to the
+// full column instead of leaving empty space under the profile.
+// Affiliations clear the float and span full width below.
 @media (min-width: 576px) {
   article:has(> .profile) {
-    display: grid;
-    grid-template-columns: 1fr 32%;
-    column-gap: 2rem;
-    align-items: start;
-
     > .profile {
-      grid-column: 2;
-      grid-row: 1;
-      float: none !important;
-      width: 100% !important;
-      margin: 0 !important;
+      float: right !important;
+      width: 32% !important;
+      margin: 0 0 0.25rem 2rem !important;
+
+      // Trim the space under the icons so the float ends right at them and
+      // the bio widens a line sooner.
+      .profile-social { margin-bottom: 0; }
     }
-
-    > .clearfix { display: contents; }
-
-    .bio { grid-column: 1; grid-row: 1; }
 
     .affiliations,
     .mentoring-callout,
     > h2,
     > .news {
-      grid-column: 1 / -1;
+      clear: both;
     }
   }
 }
