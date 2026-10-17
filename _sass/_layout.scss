@@ -732,6 +732,11 @@ html.typewriter-skip .typewriter-suffix {
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
     }
 
+    // Phones: the media column stacks above the text; give it room.
+    @media (max-width: 575.98px) {
+      .col-sm-4.preview { margin-bottom: 0.85rem; }
+    }
+
     &:hover {
       img.preview, .preview img, video.preview {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);

@@ -35,6 +35,7 @@
   pypi          = {https://pypi.org/project/rpx-benchmark/},
   toolkit_docs  = {https://irvlutd.github.io/RPX/toolkit-docs/},
   preview       = {rpx.webp},
+  preview_video = {https://irvlutd.github.io/RPX/assets/videos/showcase.mp4},
   pdf           = {research/phd/RPX/RPX-preprint.pdf},
   abstract      = {Robots change the scenes they perceive. A hand enters the frame, objects move, and the scene at the end differs from the start. Yet the perception models on these robots are chosen from benchmarks of frozen scenes. This paper asks how much that mismatch matters. We introduce RPX, a benchmark of 100 real scenes with 70 everyday objects, recorded with robot-grade sensors before, during, and after manipulation --- ~133K annotated frames. We evaluate 49 pretrained models zero-shot on six tasks (65 evaluations): image depth, video depth, multi-object tracking, relative camera pose, and two forms of visual question answering. Two numbers summarize each model: phase robustness from a repeated-measures MANOVA and worst-phase quality. The results are not subtle. Every depth and tracking model and 20 of 24 VLM evaluations change significantly across phases (p<0.001); near-range video-depth error grows 2.0--4.4x while the robot acts, every tracker falls to a phase robustness of 0.21--0.55 on transitions through Interaction, and the best in-context grounding reaches a worst-phase quality of only 0.23. Relative pose alone holds steady (0.86--0.97) --- and it is the one task Interaction is not evaluated on. Rankings also change from task to task. The model that tops a static leaderboard is not the one that keeps working once the robot moves. RPX tells them apart --- and, because every failure is localized to a specific phase and scene, gives model developers the diagnostic structure to see where a model breaks, not just that it does.}
 }
@@ -107,7 +108,7 @@
   website={https://irvlutd.github.io/SceneReplica/},
   code={https://github.com/IRVLUTD/SceneReplica},
   preview={scene-replica.webp},
-  preview_video={/assets/video/publication_previews/scenereplica.mp4},
+  preview_video={https://saihaneeshallu.github.io/images/scenereplica.mp4},
   pdf = {https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10610180},
   abstract = {We present a new reproducible benchmark for evaluating robot manipulation in the real world, specifically focusing on the task of pick-and-place. Our benchmark uses the YCB objects, a commonly used dataset in the robotics community, to ensure that our results are comparable to other studies. Additionally, the benchmark is designed to be easily reproducible in the real world, making it accessible for researchers and practitioners. We also provide our experimental results and analyses for model-based and model-free 6D robotic grasping on the benchmark, where representative algorithms for object perception, grasping planning and motion planning are evaluated. We believe that our benchmark will be a valuable tool for advancing the field of robot manipulation. By providing a standardized evaluation framework, researchers can more easily compare different techniques and algorithms, leading to faster progress in developing robot manipulation methods.}
 }
@@ -122,6 +123,7 @@
   website = {https://irvlutd.github.io/FewSOL},
   code = {https://github.com/IRVLUTD/few-shot-dataset},
   preview = {fewsol.webp},
+  preview_video = {/assets/video/publication_previews/fewsol.mp4},
   poster = {/assets/pdf/research/phd/FewSOL/posters/ICRA2023_FewSOL_Poster.pdf},
   graphical_abstract = {/assets/pdf/research/phd/FewSOL/FewSOL-ICRA23-Graphical-Abstract.pdf},
   pdf = {https://arxiv.org/pdf/2207.03333.pdf},
@@ -138,6 +140,7 @@
   publisher={American Psychological Association},
   bibtex_show = {true},
   preview = {seq-analysis.webp},
+  preview_max_width = {55%},
   doi = {https://doi.org/10.1037/met0000570},
   abstract = {Planning an appropriate sample size for a study involves considering several issues. Two important considerations are cost constraints and variability inherent in the population from which data will be sampled. Methodologists have developed sample size planning methods for two or more populations when testing for equivalence or noninferiority/superiority for a linear contrast of population means. Additionally, cost constraints and variance heterogeneity among populations have also been considered. We extend these methods by developing a theory for sequential procedures for testing the equivalence or noninferiority/superiority for a linear contrast of population means under cost constraints, which we prove to effectively utilize the allocated resources. Our method, due to the sequential framework, does not require prespecified values of unknown population variance(s), something that is historically an impediment to designing studies. Importantly, our method does not require an assumption of a specific type of distribution of the data in the relevant population from which the observations are sampled, as we make our developments in a data distribution-free context. We provide an illustrative example to show how the implementation of the proposed approach can be useful in applied research.}
 }

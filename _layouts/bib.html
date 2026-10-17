@@ -2,7 +2,7 @@
 ---
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-2 {% if entry.preview or entry.preview_video %}preview{% else %}abbr{% endif %}">
+        <div class="col-sm-4 {% if entry.preview or entry.preview_video %}preview{% else %}abbr{% endif %}"{% if entry.preview_max_width %} style="--preview-max-width: {{ entry.preview_max_width }}"{% endif %}>
         {%- if entry.preview_video -%}
           {%- assign poster_path = nil -%}
           {%- if entry.preview -%}

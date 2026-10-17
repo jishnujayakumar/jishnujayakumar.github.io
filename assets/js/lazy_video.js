@@ -8,6 +8,11 @@
     video.dataset.hydrated = "1";
     var src = video.getAttribute("data-src");
     if (!src) return;
+    // Local `jekyll serve` answers cached range requests with a bare 304,
+    // which <video> can't use; bust the cache only when previewing locally.
+    if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) {
+      src += (src.indexOf("?") < 0 ? "?" : "&") + "nocache=" + Date.now();
+    }
     var s = document.createElement("source");
     s.src = src;
     s.type = "video/mp4";
