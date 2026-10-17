@@ -1,6 +1,7 @@
 ---
 layout: about
 title: About
+seo_title: Jishnu Jaykumar P | Robot Learning Research Scientist
 permalink: /
 seo_description: PhD student at UT Dallas (IRVL) working on embodied robotics — learning from humans and few examples. Graduating 2027 — open to research scientist roles in industry.
 subtitle: <strong>Research:</strong> <a href="/publications/"><span class="research-phrase">Learning from humans and few examples for embodied robotics</span></a>
@@ -26,7 +27,7 @@ I work on making robots learn from minimal supervision &mdash; few-shot examples
   <li><a href="https://irvlutd.github.io/Proto-CLIP/" target="_blank">Proto-CLIP</a> <span class="venue-tag">IROS 2024</span> &mdash; vision-language few-shot perception</li>
   <li><a href="https://irvlutd.github.io/iTeach/" target="_blank">iTeach</a> (under submission) &mdash; learning from mistakes via human interaction and guidance</li>
   <li><a href="https://irvlutd.github.io/HRT1/" target="_blank">HRT1</a> <span class="venue-tag">RA-L 2026</span> &mdash; training-free mobile manipulation from a single video</li>
-  <li><a href="https://irvlutd.github.io/RPX/" target="_blank">RPX</a> (under submission) &mdash; unified benchmark for choosing the pretrained perception models the projects above depend on, tested on real-world scenes from robot-grade cameras</li>
+  <li><a href="https://irvlutd.github.io/RPX/" target="_blank">RPX</a> (under submission) &mdash; modular, foundation-model, and agentic robots all run on perception models; RPX gauges them in one unified benchmark across four real-world scenarios (clutter, interaction, clean, egocentric) captured with <span style="white-space: nowrap;">robot-grade</span> cameras, so they&rsquo;re chosen on evidence, not at random</li>
 </ul>
 
 </div>

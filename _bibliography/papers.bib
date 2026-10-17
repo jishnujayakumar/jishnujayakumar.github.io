@@ -39,36 +39,11 @@
   abstract      = {Robots change the scenes they perceive. A hand enters the frame, objects move, and the scene at the end differs from the start. Yet the perception models on these robots are chosen from benchmarks of frozen scenes. This paper asks how much that mismatch matters. We introduce RPX, a benchmark of 100 real scenes with 70 everyday objects, recorded with robot-grade sensors before, during, and after manipulation --- ~133K annotated frames. We evaluate 49 pretrained models zero-shot on six tasks (65 evaluations): image depth, video depth, multi-object tracking, relative camera pose, and two forms of visual question answering. Two numbers summarize each model: phase robustness from a repeated-measures MANOVA and worst-phase quality. The results are not subtle. Every depth and tracking model and 20 of 24 VLM evaluations change significantly across phases (p<0.001); near-range video-depth error grows 2.0--4.4x while the robot acts, every tracker falls to a phase robustness of 0.21--0.55 on transitions through Interaction, and the best in-context grounding reaches a worst-phase quality of only 0.23. Relative pose alone holds steady (0.86--0.97) --- and it is the one task Interaction is not evaluated on. Rankings also change from task to task. The model that tops a static leaderboard is not the one that keeps working once the robot moves. RPX tells them apart --- and, because every failure is localized to a specific phase and scene, gives model developers the diagnostic structure to see where a model breaks, not just that it does.}
 }
 
-@software{p2026uois_toolkit,
-  abbr         = {GitHub},
-  title        = {UOIS Toolkit: A toolkit for unseen object instance segmentation tasks},
-  author       = {Jishnu Jaykumar P and Aggarwal, Avaya and Maheshwari, Animesh},
-  publisher    = {GitHub},
-  bibtex_show  = {true},
-  journal      = {GitHub},
-  month        = {Apr},
-  year         = {2026},
-  code         = {https://github.com/jishnujayakumar/uois_toolkit},
-  preview      = {https://raw.githubusercontent.com/jishnujayakumar/uois_toolkit/main/media/banner.gif}
-}
-
-@software{p2024robokit,
-  abbr         = {Zenodo},
-  title  = {Robokit: A toolkit for robotic tasks},
-  author = {Jishnu Jaykumar P},
-  publisher    = {Zenodo},
-  bibtex_show  = {true},
-  journal      = {Zenodo},
-  month        = {Nov},
-  year         = {2024},
-  code         = {https://github.com/jishnujayakumar/robokit},
-  preview = {robokit.webp}
-}
-
 @misc{p2026iteachwildinteractiveteaching,
     title         = {iTeach: In the Wild Interactive Teaching for Failure-Driven Adaptation of Robot Perception},
     author        = {Jishnu Jaykumar P and Cole Salvato and Vinaya Bomnale and Jikai Wang and Ayush Bhardwaj and Jin-Ryong Kim and Yu Xiang},
     year          = {2026},
+    note          = {Under submission},
     eprint        = {2410.09072},
     archivePrefix = {arXiv},
     primaryClass  = {cs.RO},
@@ -97,7 +72,6 @@
   pdf = {https://arxiv.org/pdf/2405.17859.pdf},
   abstract = {Novel Instance Detection and Segmentation (NIDS) aims at detecting and segmenting novel object instances given a few examples of each instance. We propose a unified framework (NIDS-Net) comprising object proposal generation, embedding creation for both instance templates and proposal regions, and embedding matching for instance label assignment. Leveraging recent advancements in large vision methods, we utilize the Grounding DINO and Segment Anything Model (SAM) to obtain object proposals with accurate bounding boxes and masks. Central to our approach is the generation of high-quality instance embeddings. We utilize foreground feature averages of patch embeddings from the DINOv2 ViT backbone, followed by refinement through a weight adapter mechanism that we introduce. We show experimentally that our weight adapter can adjust the embeddings locally within their feature space and effectively limit overfitting. This methodology enables a straightforward matching strategy, resulting in significant performance gains. Our framework surpasses current state-of-the-art methods, demonstrating notable improvements of 22.3, 46.2, 10.3, and 24.0 in average precision (AP) across four detection datasets. In instance segmentation tasks on seven core datasets of the BOP challenge, our method outperforms the top RGB methods by 3.6 AP and remains competitive with the best RGB-D method.}
 }
-
 
 @INPROCEEDINGS{padalunkal2024protoclip,
   author={P, Jishnu Jaykumar and Palanisamy, Kamalesh and Chao, Yu-Wei and Du, Xinya and Xiang, Yu},
@@ -138,7 +112,6 @@
   abstract = {We present a new reproducible benchmark for evaluating robot manipulation in the real world, specifically focusing on the task of pick-and-place. Our benchmark uses the YCB objects, a commonly used dataset in the robotics community, to ensure that our results are comparable to other studies. Additionally, the benchmark is designed to be easily reproducible in the real world, making it accessible for researchers and practitioners. We also provide our experimental results and analyses for model-based and model-free 6D robotic grasping on the benchmark, where representative algorithms for object perception, grasping planning and motion planning are evaluated. We believe that our benchmark will be a valuable tool for advancing the field of robot manipulation. By providing a standardized evaluation framework, researchers can more easily compare different techniques and algorithms, leading to faster progress in developing robot manipulation methods.}
 }
 
-
 @INPROCEEDINGS{padalunkal2023fewsol,
   title={{FewSOL: A Dataset for Few-Shot Object Learning in Robotic Environments}}, 
   author={P, Jishnu Jaykumar and Chao, Yu-Wei and Xiang, Yu},
@@ -155,7 +128,6 @@
   bibtex_show={true},
   abstract = {We introduce the Few-Shot Object Learning (FEWSOL) dataset for object recognition with a few images per object. We captured 336 real-world objects with 9 RGB-D images per object from different views. Fewsol has object segmentation masks, poses, and attributes. In addition, synthetic images generated using 330 3D object models are used to augment the dataset. We investigated (i) few-shot object classification and (ii) joint object segmentation and few-shot classification with state-of-the-art methods for few-shot learning and meta-learning using our dataset. The evaluation results show the presence of a large margin to be improved for few-shot object classification in robotic environments, and our dataset can be used to study and enhance few-shot object recognition for robot perception. Dataset and code available at https://irvlutd.github.io/FewSOL.}
 }
-
 
 @article{chattopadhyay2023sequential,
   abbr={PsyMet},
@@ -202,7 +174,6 @@ matching to validate point-4.
   preview = {re-embed-kgqa.webp}
 }
 
-
 @INPROCEEDINGS{singh2021edgedetect,
   abbr={IEEE CCNC},
   author={Singh*, Praneet and P*, Jishnu Jaykumar and Pankaj, Akhil and Mitra, Reshmi},
@@ -218,6 +189,31 @@ matching to validate point-4.
   abstract = {Edge nodes are crucial for detection against multitudes of cyber attacks on Internet-of-Things endpoints and is set to become part of a multi-billion industry. The resource constraints in this novel network infrastructure tier constricts the deployment of existing Network Intrusion Detection System with Deep Learning models (DLM). We address this issue by developing a novel light, fast and accurate `Edge-Detect' model, which detects Distributed Denial of Service attack on edge nodes using DLM techniques. Our model can work within resource restrictions i.e. low power, memory and processing capabilities, to produce accurate results at a meaningful pace. It is built by creating layers of Long Short-Term Memory or Gated Recurrent Unit based cells, which are known for their excellent representation of sequential data. We designed a practical data science pipeline with Recurring Neural Network to learn from the network packet behavior in order to identify whether it is normal or attack-oriented. The model evaluation is from deployment on actual edge node represented by Raspberry Pi using current cybersecurity dataset (UNSW2015). Our results demonstrate that in comparison to conventional DLM techniques, our model maintains a high testing accuracy of ~99% even with lower resource utilization in terms of cpu and memory. In addition, it is nearly 3 times smaller in size than the state-of-art model and yet requires a much lower testing time.}
   }
 
+@software{p2026uois_toolkit,
+  abbr         = {GitHub},
+  title        = {UOIS Toolkit: A toolkit for unseen object instance segmentation tasks},
+  author       = {Jishnu Jaykumar P and Aggarwal, Avaya and Maheshwari, Animesh},
+  publisher    = {GitHub},
+  bibtex_show  = {true},
+  journal      = {GitHub},
+  month        = {Apr},
+  year         = {2026},
+  code         = {https://github.com/jishnujayakumar/uois_toolkit},
+  preview      = {https://raw.githubusercontent.com/jishnujayakumar/uois_toolkit/main/media/banner.gif}
+}
+
+@software{p2024robokit,
+  abbr         = {Zenodo},
+  title  = {Robokit: A toolkit for robotic tasks},
+  author = {Jishnu Jaykumar P},
+  publisher    = {Zenodo},
+  bibtex_show  = {true},
+  journal      = {Zenodo},
+  month        = {Nov},
+  year         = {2024},
+  code         = {https://github.com/jishnujayakumar/robokit},
+  preview = {robokit.webp}
+}
 
 @software{p_mvtractus_2018,
   abbr         = {Zenodo},
@@ -234,4 +230,3 @@ matching to validate point-4.
   code         = {https://github.com/jishnujayakumar/MV-Tractus},
   preview = {mv-tractus.webp}
 }
-
