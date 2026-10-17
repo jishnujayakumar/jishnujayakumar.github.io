@@ -243,6 +243,11 @@ defaults:
       type: "news"
     values:
       sitemap: false
+  # Google Search Console ownership file: must be served, not indexed.
+  - scope:
+      path: "google652b5b71cbc044e8.html"
+    values:
+      sitemap: false
 
 # -----------------------------------------------------------------------------
 # Jekyll Minifier
