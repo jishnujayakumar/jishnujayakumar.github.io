@@ -186,6 +186,15 @@
           {%- if entry.code %}
             <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
           {%- endif %}
+          {%- if entry.dataset_url %}
+            <a href="{{ entry.dataset_url }}" class="btn btn-sm z-depth-0" role="button">Dataset</a>
+          {%- endif %}
+          {%- if entry.pypi %}
+            <a href="{{ entry.pypi }}" class="btn btn-sm z-depth-0" role="button">PyPI</a>
+          {%- endif %}
+          {%- if entry.toolkit_docs %}
+            <a href="{{ entry.toolkit_docs }}" class="btn btn-sm z-depth-0" role="button">Docs</a>
+          {%- endif %}
           {%- if entry.poster %}
             {% if entry.poster contains '://' -%}
             <a href="{{ entry.poster }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Poster</a>

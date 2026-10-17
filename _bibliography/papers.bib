@@ -23,6 +23,22 @@
   abstract = {We introduce a novel system for human-to-robot trajectory transfer that enables robots to manipulate objects by learning from human demonstration videos. The system consists of four modules. The first module is a data collection module that is designed to collect human demonstration videos from the point of view of a robot using an AR headset. The second module is a video understanding module that detects objects and extracts 3D human-hand trajectories from demonstration videos. The third module transfers a human-hand trajectory into a reference trajectory of a robot end-effector in 3D space. The last module utilizes a trajectory optimization algorithm to solve a trajectory in the robot configuration space that can follow the end-effector trajectory transferred from the human demonstration. Consequently, these modules enable a robot to watch a human demonstration video once and then repeat the same mobile manipulation task in different environments, even when objects are placed differently from the demonstrations.}
 }
 
+@misc{p2026rpx,
+  title         = {Same Scene, Different Story: Evaluating Robot Perception Across Scene Phases in the Wild},
+  author        = {Jishnu Jaykumar P* and Itay Kadosh* and Narendhiran Vijayakumar* and Srinanditha Kamath and Sai Haneesh Allu and Govind Tyagi Rangappa and Animesh Maheshwari and Jikai Wang and Yu Xiang},
+  year          = {2026},
+  note          = {Under submission},
+  bibtex_show   = {true},
+  website       = {https://irvlutd.github.io/RPX},
+  code          = {https://github.com/IRVLUTD/RPX},
+  dataset_url   = {https://huggingface.co/datasets/IRVLUTD/RPX},
+  pypi          = {https://pypi.org/project/rpx-benchmark/},
+  toolkit_docs  = {https://irvlutd.github.io/RPX/toolkit-docs/},
+  preview       = {rpx.webp},
+  pdf           = {research/phd/RPX/RPX-preprint.pdf},
+  abstract      = {Robots change the scenes they perceive. A hand enters the frame, objects move, and the scene at the end differs from the start. Yet the perception models on these robots are chosen from benchmarks of frozen scenes. This paper asks how much that mismatch matters. We introduce RPX, a benchmark of 100 real scenes with 70 everyday objects, recorded with robot-grade sensors before, during, and after manipulation --- ~133K annotated frames. We evaluate 49 pretrained models zero-shot on six tasks (65 evaluations): image depth, video depth, multi-object tracking, relative camera pose, and two forms of visual question answering. Two numbers summarize each model: phase robustness from a repeated-measures MANOVA and worst-phase quality. The results are not subtle. Every depth and tracking model and 20 of 24 VLM evaluations change significantly across phases (p<0.001); near-range video-depth error grows 2.0--4.4x while the robot acts, every tracker falls to a phase robustness of 0.21--0.55 on transitions through Interaction, and the best in-context grounding reaches a worst-phase quality of only 0.23. Relative pose alone holds steady (0.86--0.97) --- and it is the one task Interaction is not evaluated on. Rankings also change from task to task. The model that tops a static leaderboard is not the one that keeps working once the robot moves. RPX tells them apart --- and, because every failure is localized to a specific phase and scene, gives model developers the diagnostic structure to see where a model breaks, not just that it does.}
+}
+
 @software{p2026uois_toolkit,
   abbr         = {GitHub},
   title        = {UOIS Toolkit: A toolkit for unseen object instance segmentation tasks},
@@ -51,7 +67,7 @@
 
 @misc{p2026iteachwildinteractiveteaching,
     title         = {iTeach: In the Wild Interactive Teaching for Failure-Driven Adaptation of Robot Perception},
-    author        = {Jishnu Jaykumar P and Cole Salvato and Vinaya Bomnale and Jikai Wang and Yu Xiang},
+    author        = {Jishnu Jaykumar P and Cole Salvato and Vinaya Bomnale and Jikai Wang and Ayush Bhardwaj and Jin-Ryong Kim and Yu Xiang},
     year          = {2026},
     eprint        = {2410.09072},
     archivePrefix = {arXiv},
@@ -61,6 +77,7 @@
     bibtex_show   = {true},
     website       = {https://irvlutd.github.io/iTeach},
     code          = {https://github.com/IRVLUTD/iTeach},
+    dataset_url   = {https://irvlutd.github.io/iTeach/#resources},
     preview       = {https://irvlutd.github.io/iTeach/assets/images/iteach/iteach-overview.webp},
     preview_video = {/assets/video/publication_previews/iteach.mp4},
     pdf           = {https://arxiv.org/pdf/2410.09072},
