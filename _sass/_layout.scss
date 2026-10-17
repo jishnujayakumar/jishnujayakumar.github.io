@@ -188,6 +188,30 @@ html.typewriter-skip .typewriter-suffix {
 
     &:last-child { margin-bottom: 0; }
   }
+
+  // Venue pill after each thesis project (ICRA 2023, RA-L 2026, …) — a
+  // tinted theme-color chip so venues read apart from the project links.
+  .venue-tag {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0 0.45em;
+    border: 1px solid color-mix(in srgb, var(--global-theme-color) 45%, transparent);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--global-theme-color) 14%, var(--global-bg-color));
+    color: var(--global-theme-color);
+    font-size: 0.82em;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    vertical-align: 0.06em;
+
+    // Cyan on a dark tint reads faint; strengthen the chip in dark mode.
+    html[data-theme='dark'] & {
+      border-color: color-mix(in srgb, var(--global-theme-color) 70%, transparent);
+      background: color-mix(in srgb, var(--global-theme-color) 22%, var(--global-bg-color));
+      color: color-mix(in srgb, var(--global-theme-color) 70%, white);
+    }
+  }
 }
 
 // Mentoring call-to-action on the about page. A left accent + faint tint
