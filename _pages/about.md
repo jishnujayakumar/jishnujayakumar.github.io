@@ -19,7 +19,15 @@ I&rsquo;m a final-year PhD student at [UT Dallas](https://www.utdallas.edu){:tar
 
 🎓 ***I&rsquo;m graduating in 2027 and looking for full-time research scientist positions in industry. If my experience brings value to your team, please [reach out](mailto:{{ site.email }})!***
 
-I work on making robots learn from minimal supervision &mdash; either few-shot examples (a few photos of an object) or input from humans (one demonstration video, a few iterations of guidance/correction). <strong style="color: var(--global-theme-color); font-style: italic;">The work runs on real hardware, not just in simulation.</strong> My PhD thesis brings four such projects together: [FewSOL](https://irvlutd.github.io/FewSOL/){:target="_blank"} <span class="venue-tag">ICRA 2023</span>, a few-shot object learning dataset; [Proto-CLIP](https://irvlutd.github.io/Proto-CLIP/){:target="_blank"} <span class="venue-tag">IROS 2024</span>, vision-language few-shot perception; [iTeach](https://irvlutd.github.io/iTeach/){:target="_blank"} (under submission), learning from human interaction and guidance; and [HRT1](https://irvlutd.github.io/HRT1/){:target="_blank"} <span class="venue-tag">RA-L 2026</span>, training-free mobile manipulation from a single video. All of this rests on pretrained perception models, so my latest work, [RPX](https://irvlutd.github.io/RPX/){:target="_blank"} (under submission), is a unified benchmark for choosing them: it tests many tasks on the same real-world scenes, captured with robot-grade cameras before, during, and after manipulation.
+I work on making robots learn from minimal supervision &mdash; few-shot examples or input from humans. <strong style="color: var(--global-theme-color); font-style: italic;">The work runs on real hardware, not just in simulation.</strong> My PhD thesis brings five projects together:
+
+<ul class="thesis-list">
+  <li><a href="https://irvlutd.github.io/FewSOL/" target="_blank">FewSOL</a> <span class="venue-tag">ICRA 2023</span> &mdash; few-shot object learning dataset</li>
+  <li><a href="https://irvlutd.github.io/Proto-CLIP/" target="_blank">Proto-CLIP</a> <span class="venue-tag">IROS 2024</span> &mdash; vision-language few-shot perception</li>
+  <li><a href="https://irvlutd.github.io/iTeach/" target="_blank">iTeach</a> (under submission) &mdash; learning from mistakes via human interaction and guidance</li>
+  <li><a href="https://irvlutd.github.io/HRT1/" target="_blank">HRT1</a> <span class="venue-tag">RA-L 2026</span> &mdash; training-free mobile manipulation from a single video</li>
+  <li><a href="https://irvlutd.github.io/RPX/" target="_blank">RPX</a> (under submission) &mdash; unified benchmark for choosing the pretrained perception models the projects above depend on, tested on real-world scenes from robot-grade cameras</li>
+</ul>
 
 </div>
 

@@ -163,11 +163,11 @@ html.typewriter-skip .typewriter-suffix {
     > .profile {
       float: right !important;
       width: 32% !important;
-      margin: 0 0 0.25rem 2rem !important;
+      margin: 0 0 0 2rem !important;
 
       // Trim the space under the icons so the float ends right at them and
       // the bio widens a line sooner.
-      .profile-social { margin-bottom: 0; }
+      .profile-social { margin-bottom: 0; padding-bottom: 0.2rem; }
     }
 
     .affiliations,
@@ -187,6 +187,16 @@ html.typewriter-skip .typewriter-suffix {
     line-height: 1.6;
 
     &:last-child { margin-bottom: 0; }
+  }
+
+  // Thesis projects: one per line so name + venue scan at a glance.
+  .thesis-list {
+    margin: -0.35rem 0 0.9rem;
+    padding-left: 1.2rem;
+    line-height: 1.6;
+
+    li { margin-bottom: 0.15rem; }
+    li::marker { color: var(--global-theme-color); }
   }
 
   // Venue pill after each thesis project (ICRA 2023, RA-L 2026, …) — a
