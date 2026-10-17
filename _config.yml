@@ -172,9 +172,6 @@ collections:
       layout: post
     output: true
     permalink: /news/:path/
-  projects:
-    output: true
-    permalink: /projects/:path/
 
 announcements:
   enabled: true
@@ -206,6 +203,7 @@ kramdown:
 # Includes & excludes
 include: ['_pages']
 exclude:
+  - archive
   - bin
   - Gemfile
   - Gemfile.lock
@@ -236,6 +234,13 @@ plugins:
 defaults:
   - scope:
       path: "assets"
+    values:
+      sitemap: false
+  # One-line news items stay on the homepage/news list but out of the
+  # sitemap, so search engines don't index ~50 thin pages.
+  - scope:
+      path: ""
+      type: "news"
     values:
       sitemap: false
 
