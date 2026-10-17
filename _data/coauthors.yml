@@ -85,7 +85,7 @@
     url: https://kninad.github.io/
 "Allu":
   - firstname: [ "Sai Haneesh", "S. H." ]
-    url: https://labs.utdallas.edu/irvl/people/
+    url: https://saihaneeshallu.github.io
 "Lu":
   - firstname: [ "Yangxiao", "Y." ]
     url: https://youngsean.github.io/
@@ -109,4 +109,36 @@
 
 "Wang":
   - firstname: [ "Jikai", "J." ]
+    url: https://jwroboticsvision.github.io/
+
+"Bhardwaj":
+  - firstname: [ "Ayush", "A." ]
+    url: https://ayush-bhardwaj.vercel.app/
+
+"Kim":
+  - firstname: [ "Jin-Ryong", "J.-R.", "J." ]
+    url: https://jessekim.com/
+
+"Kadosh":
+  - firstname: [ "Itay", "I." ]
     url: https://labs.utdallas.edu/irvl/people/
+
+"Vijayakumar":
+  - firstname: [ "Narendhiran", "N." ]
+    url: https://narendhiranv04.github.io
+
+"Kamath":
+  - firstname: [ "Srinanditha", "S." ]
+    url: https://www.linkedin.com/in/srinandithakamath/
+
+"Rangappa":
+  - firstname: [ "Govind Tyagi", "G. T.", "G." ]
+    url: https://www.linkedin.com/in/govind-rangappa/
+
+"Maheshwari":
+  - firstname: [ "Animesh", "A." ]
+    url: https://scholar.google.com/citations?user=slTojVEAAAAJ
+
+"Aggarwal":
+  - firstname: [ "Avaya", "A." ]
+    url: https://www.avayaaggarwal.com/
