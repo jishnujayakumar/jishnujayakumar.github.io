@@ -20,7 +20,7 @@ I&rsquo;m a final-year PhD student at [UT Dallas](https://www.utdallas.edu){:tar
 
 🎓 ***I&rsquo;m graduating in 2027 and looking for full-time research scientist positions in industry. If my experience brings value to your team, please [reach out](mailto:{{ site.email }})!***
 
-I work on making robots learn from minimal supervision &mdash; few-shot examples or input from humans. <strong style="color: var(--global-theme-color); font-style: italic;">The work runs on real hardware, not just in simulation.</strong> My PhD thesis brings five projects together:
+I work on making robots learn from minimal supervision &mdash; few-shot examples or input from humans. <strong style="color: var(--global-theme-color); font-style: italic;">I build and test on physical robots and real-world scenes.</strong> My PhD thesis brings five projects together:
 
 <ul class="thesis-list">
   <li><a href="https://irvlutd.github.io/FewSOL/" target="_blank">FewSOL</a> <span class="venue-tag">ICRA 2023</span> &mdash; few-shot object learning dataset</li>
