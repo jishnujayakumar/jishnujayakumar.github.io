@@ -26,7 +26,7 @@ I work on making robots learn from minimal supervision &mdash; few-shot examples
   <li><a href="https://irvlutd.github.io/FewSOL/" target="_blank">FewSOL</a> <span class="venue-tag">ICRA 2023</span> &mdash; few-shot object learning dataset</li>
   <li><a href="https://irvlutd.github.io/Proto-CLIP/" target="_blank">Proto-CLIP</a> <span class="venue-tag">IROS 2024</span> &mdash; vision-language few-shot perception</li>
   <li><a href="https://irvlutd.github.io/iTeach/" target="_blank">iTeach</a> (under submission) &mdash; learning from mistakes via human interaction and guidance</li>
-  <li><a href="https://irvlutd.github.io/HRT1/" target="_blank">HRT1</a> <span class="venue-tag">RA-L 2026</span> &mdash; training-free mobile manipulation from a single video</li>
+  <li><a href="https://irvlutd.github.io/HRT1/" target="_blank">HRT1</a> <span class="venue-tag">RA-L 2026</span> <span class="venue-tag">ICRA 2027</span> &mdash; training-free mobile manipulation from a single video</li>
   <li><a href="https://irvlutd.github.io/RPX/" target="_blank">RPX</a> (under submission) &mdash; modular, foundation-model, and agentic robots all run on perception models; RPX gauges them in one unified benchmark across four real-world scenarios (clutter, interaction, clean, egocentric) captured with <span style="white-space: nowrap;">robot-grade</span> cameras, so they&rsquo;re chosen on evidence, not at random</li>
 </ul>
 
