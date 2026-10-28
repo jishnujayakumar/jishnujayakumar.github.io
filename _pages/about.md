@@ -16,11 +16,13 @@ social: true  # includes social icons at the bottom of the page
 
 <div class="bio" markdown="1">
 
-I&rsquo;m a final-year PhD student at [UT Dallas](https://www.utdallas.edu){:target="_blank"}, working on robot learning with [Yu Xiang](https://yuxng.github.io/){:target="_blank"} at [IRVL](https://labs.utdallas.edu/irvl/){:target="_blank"}. I started as an MS student in Fall 2021 and switched to the PhD program after my first year.
+I&rsquo;m a final-year PhD student at [UT Dallas](https://www.utdallas.edu){:target="_blank"}, working on robot learning with [Yu Xiang](https://yuxng.github.io/){:target="_blank"} at [IRVL](https://labs.utdallas.edu/irvl/){:target="_blank"}. I started as an MS student in Fall 2021 and switched to the PhD program after my first year. Along the way, I&rsquo;ve been fortunate to receive the [Jonsson School Graduate Study Scholarship](https://engineering.utdallas.edu/academics/graduate-education/graduate-funding-opportunities/){:target="_blank"} (2021), the [Louis Beecherl, Jr. Fellowship](https://engineering.utdallas.edu/academics/graduate-education/graduate-funding-opportunities/louis-beecherl-jr-fellowship/){:target="_blank"} (2026), and the [Dean of Graduate Education Dissertation Research Award](https://engineering.utdallas.edu/news/archive/summer-2026/2026-faculty-staff-awards/){:target="_blank"} (2026).
+
+I work on making robots learn from minimal supervision &mdash; few-shot examples or input from humans. <strong style="color: var(--global-theme-color); font-style: italic;">I build and test on physical robots and real-world scenes.</strong>
 
 🎓 ***I&rsquo;m graduating in 2027 and looking for full-time research scientist positions in industry. If my experience brings value to your team, please [reach out](mailto:{{ site.email }})!***
 
-I work on making robots learn from minimal supervision &mdash; few-shot examples or input from humans. <strong style="color: var(--global-theme-color); font-style: italic;">I build and test on physical robots and real-world scenes.</strong> My PhD thesis brings five projects together:
+My PhD thesis brings five projects together:
 
 <ul class="thesis-list">
   <li><a href="https://irvlutd.github.io/FewSOL/" target="_blank">FewSOL</a> <span class="venue-tag">ICRA 2023</span> &mdash; few-shot object learning dataset</li>
@@ -29,6 +31,7 @@ I work on making robots learn from minimal supervision &mdash; few-shot examples
   <li><a href="https://irvlutd.github.io/HRT1/" target="_blank">HRT1</a> <span class="venue-tag">RA-L 2026</span> <span class="venue-tag">ICRA 2027</span> &mdash; training-free mobile manipulation from a single video</li>
   <li><a href="https://irvlutd.github.io/RPX/" target="_blank">RPX</a> (under submission) &mdash; modular, foundation-model, and agentic robots all run on perception models; RPX gauges them in one unified benchmark across four real-world scenarios (clutter, interaction, clean, egocentric) captured with <span style="white-space: nowrap;">robot-grade</span> cameras, so they&rsquo;re chosen on evidence, not at random</li>
 </ul>
+
 
 </div>
 
