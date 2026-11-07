@@ -19,6 +19,9 @@
       url: https://cvg.ethz.ch/lectures/Robot-Learning/
     - title: "Stanford CS224R: Deep Reinforcement Learning"
       url: https://cs224r.stanford.edu/
+    - title: "DeepMind x UCL: Introduction to Reinforcement Learning (David Silver)"
+      url: https://www.youtube.com/playlist?list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ
+      note: lecture videos
     - title: "Stanford CME296: Diffusion & Large Vision Models"
       url: https://www.youtube.com/playlist?list=PLoROMvodv4rNdy8rt2rZ4T2xM0OjADnfu
       note: lecture videos
